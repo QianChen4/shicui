@@ -20,11 +20,7 @@
   --b-cross:#eef0f7; --b-cross-t:#4a5683; --b-ok:#e9f0e6; --b-ok-t:#4d6b3f; --b-used:#efeae0; --b-used-t:#6b5a3a; --note-t:#7a6a2b;
   color-scheme:light;
 }
-/* 配色：陶土（默认）、叶绿、海蓝、黛紫、墨灰；另有深色模式 */
-:root[data-theme="leaf"]{--accent:#5f8a4e;--accent-d:#4a6f3c;--accent-w:#ebf2e6;--accent-b:#c6d9bb;--bg:#f2f6ed;--side:#e4ecda;--panel:#ffffff;--line:#dce5d1;--line2:#e8eee0;--line3:#c5d3b7;--text:#262b23;--text2:#424b3c;--muted:#6e7a64;--faint:#9ba690;--hover:#e0e9d5;--panel-h:#fafcf7;--soft:#f3f7ee;--tbl:#a1ad94;--shadow:0 1px 2px rgba(40,60,30,.05),0 2px 10px rgba(40,60,30,.05)}
-:root[data-theme="sea"]{--accent:#3f76a8;--accent-d:#2f5f8a;--accent-w:#e7eff7;--accent-b:#bcd2e8;--bg:#f1f5f9;--side:#e2ebf3;--panel:#ffffff;--line:#d8e2eb;--line2:#e6ecf2;--line3:#c1cfdc;--text:#22282e;--text2:#3e4953;--muted:#697681;--faint:#97a3ad;--hover:#dce6ef;--panel-h:#f9fbfd;--soft:#f1f5f9;--tbl:#9caab5;--shadow:0 1px 2px rgba(30,50,70,.05),0 2px 10px rgba(30,50,70,.05)}
-:root[data-theme="violet"]{--accent:#7d5fa6;--accent-d:#654a8a;--accent-w:#f0ebf6;--accent-b:#d5c8e6;--bg:#f6f3f9;--side:#ebe5f2;--panel:#ffffff;--line:#e1dbea;--line2:#ebe7f1;--line3:#cdc4db;--text:#29252e;--text2:#46404f;--muted:#756d80;--faint:#a29aad;--hover:#e5dfee;--panel-h:#fcfbfd;--soft:#f5f2f9;--tbl:#a79fb2;--shadow:0 1px 2px rgba(50,35,70,.05),0 2px 10px rgba(50,35,70,.05)}
-:root[data-theme="ink"]{--accent:#4f5560;--accent-d:#3b4049;--accent-w:#eceef1;--accent-b:#c9ced6;--bg:#f7f7f6;--side:#eeeeec;--panel:#ffffff;--line:#e0e0dc;--line2:#eaeae7;--line3:#cbcbc5;--text:#222220;--text2:#42423e;--muted:#71716b;--faint:#a0a09a;--hover:#e4e4e0;--panel-h:#fbfbfa;--soft:#f3f3f1;--tbl:#a5a59f;--shadow:0 1px 2px rgba(30,30,30,.05),0 2px 10px rgba(30,30,30,.05)}
+/* 配色只有陶土一种，另有深色模式（v2.12.3 起删掉了叶绿、海蓝、黛紫、墨灰） */
 :root[data-mode="dark"]{
   --bg:#1f1e1c; --side:#262523; --panel:#2c2b28; --line:#3b3934; --line2:#34322e; --line3:#4a4740;
   --text:#ebe8e1; --text2:#cfcbc2; --muted:#a29e94; --faint:#78746b;
@@ -37,10 +33,6 @@
   --b-cross:rgba(120,140,200,.18); --b-cross-t:#a9b6e6; --b-ok:rgba(120,170,100,.18); --b-ok-t:#a9cf96; --b-used:rgba(200,170,110,.16); --b-used-t:#d6c08f; --note-t:#d9c27a;
   color-scheme:dark;
 }
-:root[data-mode="dark"][data-theme="leaf"]{--accent:#7fae6c;--accent-d:#9cc78a;--accent-w:rgba(127,174,108,.17);--accent-b:rgba(127,174,108,.5);--bg:#1a1e19;--side:#21261f;--panel:#272c24;--line:#364032;--line2:#2f362b;--line3:#45503e;--text:#e5ebe0;--text2:#c7d0bf;--muted:#99a391;--faint:#707a68;--hover:#313a2d;--panel-h:#2d3329;--soft:#1f241d;--tbl:#65705c}
-:root[data-mode="dark"][data-theme="sea"]{--accent:#5f97cc;--accent-d:#86b4e0;--accent-w:rgba(95,151,204,.18);--accent-b:rgba(95,151,204,.5);--bg:#171c21;--side:#1e242a;--panel:#242b32;--line:#333f48;--line2:#2c353e;--line3:#424f5a;--text:#e2e8ee;--text2:#c2cbd4;--muted:#93a0aa;--faint:#6a7680;--hover:#2e3842;--panel-h:#29313a;--soft:#1c2228;--tbl:#606c76}
-:root[data-mode="dark"][data-theme="violet"]{--accent:#a587cf;--accent-d:#bfa6e2;--accent-w:rgba(165,135,207,.18);--accent-b:rgba(165,135,207,.5);--bg:#1c1920;--side:#231f28;--panel:#29252f;--line:#3a3441;--line2:#322d39;--line3:#4a4252;--text:#eae5ef;--text2:#ccc5d4;--muted:#9f96a9;--faint:#766e80;--hover:#342e3c;--panel-h:#2f2a35;--soft:#211d26;--tbl:#6b6375}
-:root[data-mode="dark"][data-theme="ink"]{--accent:#7a8595;--accent-d:#aab3c0;--accent-w:rgba(154,163,176,.18);--accent-b:rgba(154,163,176,.45);--bg:#1a1a1a;--side:#212121;--panel:#272727;--line:#373737;--line2:#303030;--line3:#464646;--text:#e7e7e5;--text2:#c9c9c5;--muted:#9d9d97;--faint:#73736e;--hover:#323232;--panel-h:#2d2d2d;--soft:#1f1f1f;--tbl:#676767}
 :root[data-mode="dark"] :is(.t-judge,.t-single,.t-multi,.t-fill,.t-answer,.t-exp,.lv1,.lv2,.lv3,.lv4,.lv5):not(.fill){background:rgba(255,255,255,.07);filter:brightness(1.75) saturate(.9)}
 :root[data-mode="dark"] img{opacity:.92}
 :root[data-mode="dark"] .rendered img,:root[data-mode="dark"] .rich img{background:#fff}
@@ -294,7 +286,10 @@ mark{background:var(--mark);color:inherit;padding:0 1px;border-radius:2px}
 .nb-sec a{color:var(--accent);text-decoration:none;cursor:pointer}
 .nb-sec a:hover{text-decoration:underline}
 .tips{margin:6px 0 0;padding-left:20px;color:var(--text2);line-height:1.9}
-.ws-acts{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin:16px 0 20px}
+.ws-groups{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 10px;margin:16px 0 20px}
+.ws-group{grid-column:span var(--n);display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:10px}
+.ws-gtitle{grid-column:1/-1;font-weight:600;color:var(--muted);font-size:13px;margin-bottom:-2px}
+@media (max-width:900px){.ws-groups{grid-template-columns:repeat(2,minmax(0,1fr))}.ws-group{grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr))}}
 .ws-act{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;box-shadow:var(--shadow);transition:border-color .12s,background .12s}
 .ws-act:hover{border-color:var(--accent-b);background:var(--accent-w)}
 .ws-act b{font-size:15px}
@@ -686,18 +681,29 @@ pre{background:var(--soft);border:1px solid var(--line2);border-radius:10px;padd
 #achvPop small{display:block;color:var(--accent-d);font-size:11.5px;letter-spacing:.05em}
 @keyframes slideUp{from{transform:translateY(20px);opacity:0}}
 
-/* ---------- 配色 ---------- */
-.swatches{display:flex;gap:10px;flex-wrap:wrap}
-.swatch{display:flex;flex-direction:column;align-items:center;gap:4px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;cursor:pointer;background:var(--panel);font-size:12.5px}
-.swatch i{width:34px;height:22px;border-radius:7px;display:block}
-.swatch.on{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-w)}
-
 /* ---------- 分享卡片 ---------- */
 .modal-card.card-card{width:820px;max-height:94vh;overflow:auto}
 .card-prev{background:var(--line2);border-radius:12px;padding:14px;text-align:center;margin:10px 0;max-height:62vh;overflow:auto}
 .card-prev img{max-width:100%;border-radius:8px;box-shadow:0 4px 18px rgba(0,0,0,.12)}
 .card-opts{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 #toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#2b2a26;color:#fff;padding:8px 18px;border-radius:10px;font-size:13.5px;z-index:100;box-shadow:0 6px 20px rgba(0,0,0,.2);transition:opacity .2s;pointer-events:none}
+/* 公式对话框 */
+.modal-card.tex-card{width:780px;max-height:94vh;overflow:auto;padding:18px 22px}
+.modal-card.tex-card h3{margin-bottom:2px}
+.tex-tpls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:8px}
+.tex-tpls.small{grid-template-columns:repeat(4,minmax(0,1fr))}
+.tex-tpl{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:3px;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:7px 6px 4px;cursor:pointer;overflow:hidden;font-size:13px;line-height:1.5}
+.tex-tpl:hover{border-color:var(--accent-b);background:var(--accent-w)}
+.tex-tpl small{color:var(--muted);font-size:11.5px;line-height:1.2}
+.tex-gl{font-size:13px;color:var(--text2);font-weight:600;margin:8px 0 5px}
+.tex-gl .hint{font-weight:400;color:var(--muted)}
+#texSrc{width:100%;box-sizing:border-box;height:54px;font-family:Menlo,Monaco,monospace;font-size:13px;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--panel);resize:vertical}
+.tex-prev{min-height:58px;border:1px dashed var(--line3);border-radius:10px;padding:12px;display:flex;align-items:center;justify-content:center;font-size:18px;background:var(--panel-h);overflow-x:auto}
+.tex-help{font-size:12.5px;color:var(--text2);margin:10px 0 14px}
+.tex-help summary{cursor:pointer;color:var(--accent-d)}
+.tex-help table{border-collapse:collapse;margin-top:6px;width:100%}
+.tex-help td{padding:3px 6px;border-bottom:1px solid var(--line2)}
+.tex-help code{font-family:Menlo,Monaco,monospace;background:var(--soft);border-radius:4px;padding:0 4px}
 </style>
 </head>
 <body>
@@ -708,13 +714,13 @@ pre{background:var(--soft);border:1px solid var(--line2);border-radius:10px;padd
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color:var(--accent)" stroke-width="1.8" stroke-linecap="round"><path d="M7 3c0 6 10 6 10 12s-10 3-10 6"/><path d="M17 3c0 6-10 6-10 12s10 3 10 6"/><path d="M9 6h6M9 18h6M10.5 12h3"/></svg>
       拾萃
     </div>
-    <div class="top-search"><input id="topSearch" placeholder="全库搜索：输入关键词或编号（如 121），结果随输随变" autocomplete="off"></div>
+    <div class="top-search"><input id="topSearch" placeholder="搜索关键词或编号" autocomplete="off"></div>
     <span class="sp"></span>
     <span id="saveStatus"></span>
     <button class="btn ghost" data-nav="home">工作台</button>
     <button class="btn ghost" data-nav="notes">笔记</button>
-    <button class="btn ghost" data-nav="exams">整卷</button>
-    <button class="btn ghost" data-nav="papers">试卷</button>
+    <button class="btn ghost" data-nav="exams">试卷库</button>
+    <button class="btn ghost" data-nav="papers">我的组卷</button>
     <button class="btn ghost" data-nav="basket">试题篮<span class="count" id="basketCount">0</span></button>
     <button class="btn ghost" data-nav="settings">设置</button>
   </header>
@@ -739,8 +745,8 @@ pre{background:var(--soft);border:1px solid var(--line2);border-radius:10px;padd
 const APP_VERSION=6; // 数据格式版本（v5：题目编号 no、讲题记录 taught、题集 sets、tag 别名 alias；v6：关联题目 related，去掉难度系数 coef）
 /* 版本号：v1.x 是加入在线更新以前的版本，v2.x 起有在线更新（原 v3.1.0–v3.6.0 即 v2.1.0–v2.6.0）。
    v2.6.0 以前的更新程序只认下面注释里的旧编号（第一位数字加 1），由 tools/release.py 自动填写，不要手改。
-   兼容旧版更新：const PROGRAM_VERSION='3.11.3' */
-const PROGRAM_VERSION='2.11.3'; // 程序版本：重大更新改第一位，小功能改后两位；写好 更新记录.md，再运行 tools/release.py 更新 latest.json
+   兼容旧版更新：const PROGRAM_VERSION='3.13.2' */
+const PROGRAM_VERSION='2.13.2'; // 程序版本：重大更新改第一位，小功能改后两位；写好 更新记录.md，再运行 tools/release.py 更新 latest.json
 const TRASH_DAYS=30;
 /* ================= 教材目录（人教版 2019） ================= */
 const CATALOG_RAW = [
@@ -806,6 +812,354 @@ const PAGE=20;
 const DEFAULT_SETTINGS={score:{judge:1,single:2,multi:3,fill:1,answer:1,exp:1,sub:1},grade:'all'};
 const SYMS=['♀','♂','×','∶','→','←','⇌','↑','↓','°','℃','μ','α','β','γ','Δ','±','≥','≤','≠','≈','·','～','—','①','②','③','④','⑤','⑥','Ⅰ','Ⅱ','Ⅲ','Ⅳ','√'].map(s=>[s,s,0])
  .concat([['F₁','F<sub>1</sub>',1],['F₂','F<sub>2</sub>',1],['CO₂','CO<sub>2</sub>',1],['O₂','O<sub>2</sub>',1],['H₂O','H<sub>2</sub>O',1],['Ca²⁺','Ca<sup>2+</sup>',1],['Na⁺','Na<sup>+</sup>',1],['K⁺','K<sup>+</sup>',1],['Cl⁻','Cl<sup>-</sup>',1],['Xᴮ','X<sup>B</sup>',1],['Xᵇ','X<sup>b</sup>',1]]);
+/* ================= 公式（化学式 / 反应式）：LaTeX 写法 + mhchem 的 \ce{…}，自带排版，不依赖网络 =================
+   存法：<span class="tex" data-tex="\ce{…}"></span>（里面是空的，显示时自动排出来）；Word 导出成 Word 自己的公式，可以继续改 */
+const TEX_CSS=`.tex{display:inline;white-space:nowrap;font-style:normal;text-indent:0;letter-spacing:0;cursor:inherit}
+.tex .tx{font-family:"Times New Roman","Songti SC","STSong",serif;font-size:1.06em;line-height:1}
+.tex i{font-style:italic}
+.tex .tx-b{font-weight:700}
+.tex .tx-op{margin:0 .22em}
+.tex .tx-sp{display:inline-block}
+.tex .tx-sup,.tex .tx-sub{font-size:.68em;line-height:0;position:relative}
+.tex .tx-sup{vertical-align:.62em}
+.tex .tx-sub{vertical-align:-.3em}
+.tex .tx-ss{display:inline-block;vertical-align:-.42em;font-size:.68em;line-height:1.05;text-align:left}
+.tex .tx-ss>span{display:block}
+.tex .tx-frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 .1em;font-size:.92em}
+.tex .tx-frac>span{padding:0 .15em;line-height:1.15}
+.tex .tx-frac>span:first-child{border-bottom:.06em solid currentColor}
+.tex .tx-sqrt>span{border-top:.06em solid currentColor;padding:0 .1em}
+.tex .tx-ovl{border-top:.06em solid currentColor}
+.tex .tx-unl{border-bottom:.06em solid currentColor}
+.tex .tx-arr{display:inline-flex;flex-direction:column;align-items:stretch;vertical-align:middle;min-width:2.1em;margin:0 .25em;text-align:center}
+.tex .tx-arr>.tx-lb{font-size:.66em;line-height:1.15;padding:0 .35em;white-space:nowrap}
+.tex .tx-arr>.tx-lb.ph{visibility:hidden}
+.tex .tx-ln{display:flex;height:.5em;align-items:center}
+.tex .tx-ln.two{height:.7em;flex-direction:column;justify-content:space-between}
+.tex .tx-ln.two>span{display:flex;width:100%;height:.36em}
+.tex .tx-ln svg{display:block;height:100%;flex:none;overflow:visible}
+.tex .tx-ln svg.m{flex:1;width:auto;min-width:.2em}
+.tex .tx-ln path{fill:none;stroke:currentColor;stroke-width:1.1px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
+.tex .tx-err{color:#c0281c}
+.rich .tex[contenteditable="false"]{cursor:pointer;border-radius:4px;padding:0 1px}
+.rich .tex[contenteditable="false"]:hover{background:var(--accent-w,#f6ead9);outline:1px dashed var(--accent-b,#e2c9a6)}`;
+const TEX_SYM={times:'×',cdot:'·',div:'÷',pm:'±',mp:'∓',ast:'∗',star:'⋆',to:'→',rightarrow:'→',longrightarrow:'⟶',leftarrow:'←',gets:'←',longleftarrow:'⟵',leftrightarrow:'↔',Rightarrow:'⇒',Leftarrow:'⇐',Leftrightarrow:'⇔',rightleftharpoons:'⇌',leftrightharpoons:'⇋',uparrow:'↑',downarrow:'↓',
+  alpha:'α',beta:'β',gamma:'γ',delta:'δ',epsilon:'ε',varepsilon:'ε',zeta:'ζ',eta:'η',theta:'θ',iota:'ι',kappa:'κ',lambda:'λ',mu:'μ',nu:'ν',xi:'ξ',pi:'π',rho:'ρ',sigma:'σ',tau:'τ',upsilon:'υ',phi:'φ',varphi:'φ',chi:'χ',psi:'ψ',omega:'ω',
+  Gamma:'Γ',Delta:'Δ',Theta:'Θ',Lambda:'Λ',Xi:'Ξ',Pi:'Π',Sigma:'Σ',Phi:'Φ',Psi:'Ψ',Omega:'Ω',
+  geq:'≥',ge:'≥',leq:'≤',le:'≤',neq:'≠',ne:'≠',approx:'≈',equiv:'≡',sim:'∼',propto:'∝',infty:'∞',circ:'°',degree:'°',prime:'′',partial:'∂',sum:'∑',prod:'∏',in:'∈',cap:'∩',cup:'∪',
+  cdots:'⋯',ldots:'…',dots:'…',therefore:'∴',because:'∵',female:'♀',male:'♂',celsius:'℃',
+  '%':'%','{':'{','}':'}','$':'$','&':'&','#':'#','_':'_','\\':'\n',
+  ',':'\u2009',':':'\u2005',';':'\u2005',' ':' ',quad:'\u2003',qquad:'\u2003\u2003','!':''};
+const TEX_OPS=new Set(['+','−','=','×','÷','±','∓','·','→','←','↔','⇌','⇋','⟶','⟵','⇒','⇐','⇔','≥','≤','≠','≈','≡','∼','∝','∈','∩','∪','<','>','∶']);
+const TEX_SPACES=new Set(['\u2009','\u2005','\u2003','\u2003\u2003',' ']);
+/* 解析：节点 {t:'txt',s,it,b} {t:'op',s} {t:'ss',base,sub,sup} {t:'frac',n,d} {t:'sqrt',a,deg} {t:'arr',k,up,dn} {t:'line',k,a} */
+function texReadGroup(s,i,open='{',close='}'){ // s[i]===open；返回 [内容, 结束后的位置]
+  let dep=0;
+  for(let j=i;j<s.length;j++){ const c=s[j];
+    if(c==='\\'){ j++; continue; }
+    if(c===open) dep++; else if(c===close&&--dep===0) return [s.slice(i+1,j),j+1]; }
+  return [s.slice(i+1),s.length];
+}
+function texSkipWs(s,i){ while(i<s.length&&/\s/.test(s[i])) i++; return i; }
+function texArg(s,i){ // 一个参数：{…}、\命令 或 单个字符
+  i=texSkipWs(s,i); if(i>=s.length) return ['',i];
+  if(s[i]==='{') return texReadGroup(s,i);
+  if(s[i]==='\\'){ const m=/^\\([a-zA-Z]+|.)/.exec(s.slice(i)); return [m[0],i+m[0].length]; }
+  const cp=String.fromCodePoint(s.codePointAt(i)); return [cp,i+cp.length];
+}
+function texOptArg(s,i){ const j=texSkipWs(s,i); if(s[j]!=='[') return [null,i]; return texReadGroup(s,j,'[',']'); }
+function texAttach(out,kind,nodes){ // 上下标挂到前一个“原子”上
+  let last=out[out.length-1];
+  if(last&&last.t==='ss'&&!last[kind]){ last[kind]=nodes; return; }
+  let base=[];
+  if(last&&last.t==='txt'&&[...last.s].length>1){ const ch=[...last.s]; const b=ch.pop(); last.s=ch.join(''); base=[{...last,s:b}]; }
+  else if(last&&last.t!=='op'&&last.t!=='arr'){ out.pop(); base=[last]; }
+  out.push({t:'ss',base,sub:null,sup:null,[kind]:nodes});
+}
+function texPushTxt(out,s,f={}){
+  if(!s) return; const last=out[out.length-1];
+  if(last&&last.t==='txt'&&!!last.it===!!f.it&&!!last.b===!!f.b) last.s+=s; else out.push({t:'txt',s,it:!!f.it,b:!!f.b});
+}
+function texParse(s,f={}){ // 数学模式
+  const out=[]; let i=0;
+  while(i<s.length){
+    const c=s[i];
+    if(/\s/.test(c)){ i++; continue; }
+    if(c==='{'){ const [g,j]=texReadGroup(s,i); out.push(...texParse(g,f)); i=j; continue; }
+    if(c==='^'||c==='_'){ const [a,j]=texArg(s,i+1); texAttach(out,c==='^'?'sup':'sub',texParse(a,f)); i=j; continue; }
+    if(c==='\\'){
+      const m=/^\\([a-zA-Z]+|.)/.exec(s.slice(i)); const cmd=m[1]; i+=m[0].length;
+      if(cmd==='ce'){ const [a,j]=texArg(s,i); out.push(...texParseCe(a)); i=j; continue; }
+      if(cmd==='frac'||cmd==='dfrac'||cmd==='tfrac'){ const [a,j]=texArg(s,i); const [b,k]=texArg(s,j); out.push({t:'frac',n:texParse(a,f),d:texParse(b,f)}); i=k; continue; }
+      if(cmd==='sqrt'){ const [o,j]=texOptArg(s,i); const [a,k]=texArg(s,j); out.push({t:'sqrt',a:texParse(a,f),deg:o?texParse(o,f):null}); i=k; continue; }
+      if(/^(text|textrm|mbox|textnormal)$/.test(cmd)){ const [a,j]=texArg(s,i); texPushTxt(out,a,{b:f.b}); i=j; continue; }
+      if(/^(mathrm|rm|operatorname|mathup)$/.test(cmd)){ const [a,j]=texArg(s,i); out.push(...texParse(a,{...f,up:1})); i=j; continue; }
+      if(/^(mathbf|textbf|bf|boldsymbol)$/.test(cmd)){ const [a,j]=texArg(s,i); out.push(...texParse(a,{...f,b:1})); i=j; continue; }
+      if(/^(mathit|textit|it)$/.test(cmd)){ const [a,j]=texArg(s,i); out.push(...texParse(a,{...f,up:0,itx:1})); i=j; continue; }
+      if(cmd==='overline'||cmd==='underline'){ const [a,j]=texArg(s,i); out.push({t:'line',k:cmd==='overline'?'o':'u',a:texParse(a,f)}); i=j; continue; }
+      if(cmd==='overset'||cmd==='underset'||cmd==='stackrel'){ const [a,j]=texArg(s,i); const [b,k]=texArg(s,j); const top=texParse(a,f), base=texParse(b,f);
+        const ar=base.length===1&&base[0].t==='op'&&TEX_ARROW_OF[base[0].s];
+        out.push(ar?{t:'arr',k:ar,up:cmd==='underset'?[]:top,dn:cmd==='underset'?top:[]}:{t:'ss',base,sub:null,sup:null,[cmd==='underset'?'sub':'sup']:top,stack:1}); i=k; continue; }
+      if(/^x(rightarrow|leftarrow|leftrightarrow|rightleftharpoons|leftrightharpoons|longequal|Rightarrow)$/.test(cmd)){
+        const [o,j]=texOptArg(s,i); const [a,k]=texArg(s,j);
+        const kind={xrightarrow:'r',xleftarrow:'l',xleftrightarrow:'lr',xrightleftharpoons:'eq',xleftrightharpoons:'eq',xlongequal:'=',xRightarrow:'r'}[cmd];
+        out.push({t:'arr',k:kind,up:texParse(a,f),dn:o?texParse(o,f):[]}); i=k; continue; }
+      if(cmd==='left'||cmd==='right'||cmd==='big'||cmd==='Big'||cmd==='displaystyle'||cmd==='limits'){ if(cmd==='left'||cmd==='right'){ i=texSkipWs(s,i); if(s[i]==='.') i++; } continue; }
+      if(cmd in TEX_SYM){ const v=TEX_SYM[cmd]; if(TEX_SPACES.has(v)) out.push({t:'sp',s:v}); else if(TEX_OPS.has(v)) out.push({t:'op',s:v}); else texPushTxt(out,v,{b:f.b}); continue; }
+      out.push({t:'txt',s:'\\'+cmd,err:1}); continue;
+    }
+    const cp=String.fromCodePoint(s.codePointAt(i)); i+=cp.length;
+    if(cp==='-'){ out.push({t:'op',s:'−'}); continue; }
+    if(cp==='*'){ out.push({t:'op',s:'×'}); continue; }
+    if(cp===':'){ out.push({t:'op',s:'∶'}); continue; }
+    if(TEX_OPS.has(cp)){ out.push({t:'op',s:cp}); continue; }
+    if(cp==='~'){ out.push({t:'sp',s:' '}); continue; }
+    texPushTxt(out,cp,{it:/[a-zA-Z]/.test(cp)&&!f.up,b:f.b});
+  }
+  return out;
+}
+const TEX_ARROW_OF={'→':'r','⟶':'r','←':'l','⟵':'l','↔':'lr','⇌':'eq','⇋':'eq','=':'='};
+const CE_ARROWS=[['<=>>','eq'],['<<=>','eq'],['<=>','eq'],['<-->','lr'],['<->','lr'],['->','r'],['<-','l']];
+function texParseCe(s){ // \ce{…}：化学式、反应式（mhchem 的常用写法）
+  const out=[]; let i=0;
+  const arrowAt=k=>CE_ARROWS.find(([a])=>s.startsWith(a,k));
+  while(i<s.length){
+    if(/\s/.test(s[i])){ i++; continue; }
+    const ar=arrowAt(i);
+    if(ar){ i+=ar[0].length; let up=[],dn=[]; let j=texSkipWs(s,i);
+      if(s[j]==='['){ const [a,k]=texReadGroup(s,j,'[',']'); up=texParseCe(a); i=k; j=texSkipWs(s,i);
+        if(s[j]==='['){ const [b,k2]=texReadGroup(s,j,'[',']'); dn=texParseCe(b); i=k2; } }
+      out.push({t:'arr',k:ar[1],up,dn}); continue; }
+    if(s[i]==='$'){ const j=s.indexOf('$',i+1); const e=j<0?s.length:j; out.push(...texParse(s.slice(i+1,e))); i=e+1; continue; }
+    // 一个“词”：到空白、箭头或 $ 为止（{…} 里的空白不算）
+    let j=i;
+    while(j<s.length&&!/\s/.test(s[j])&&s[j]!=='$'&&!(j>i&&arrowAt(j))){ if(s[j]==='{'){ j=texReadGroup(s,j)[1]; continue; } if(s[j]==='\\'){ j+=2; continue; } j++; }
+    const w=s.slice(i,j); i=j;
+    if(w==='+'||w==='='){ out.push({t:'op',s:w}); continue; }
+    if(w==='^'){ texPushTxt(out,'↑'); continue; }
+    if(w==='v'){ texPushTxt(out,'↓'); continue; }
+    if(out.length&&out[out.length-1].t!=='op'&&out[out.length-1].t!=='arr') out.push({t:'sp',s:' '});
+    out.push(...texCeWord(w));
+  }
+  return out;
+}
+function texCeWord(w){
+  const out=[]; let i=0;
+  const coef=/^(\d+\/\d+|\d+(?:\.\d+)?)(?=\D|$)/.exec(w);
+  if(coef&&coef[0].length<w.length&&!/^[+\-]/.test(w.slice(coef[0].length))){ const c=coef[1];
+    if(c.includes('/')){ const [a,b]=c.split('/'); out.push({t:'frac',n:[{t:'txt',s:a}],d:[{t:'txt',s:b}]}); } else texPushTxt(out,c); i=coef[0].length; }
+  else if(/^\d+$/.test(w)){ texPushTxt(out,w); return out; }
+  const atomEnd=()=>{ const l=out[out.length-1]; return l&&(l.t==='ss'||(l.t==='txt'&&/[A-Za-z)\]}]$/.test(l.s))); };
+  while(i<w.length){
+    const c=w[i], rest=w.slice(i);
+    if(c==='^'||c==='_'){ let a,j;
+      if(w[i+1]==='{'){ [a,j]=texReadGroup(w,i+1); }
+      else{ const m=/^[0-9]*[+\-]+|^[0-9]+|^\\[a-zA-Z]+|^./u.exec(w.slice(i+1)); a=m?m[0]:''; j=i+1+a.length; }
+      texAttach(out,c==='^'?'sup':'sub',texCharge(a)); i=j; continue; }
+    if(c==='$'){ const j=w.indexOf('$',i+1); const e=j<0?w.length:j; out.push(...texParse(w.slice(i+1,e))); i=e+1; continue; }
+    if(c==='\\'){ const m=/^\\([a-zA-Z]+|.)/.exec(rest); let k=i+m[0].length; // 其他命令交给数学模式（连同参数）
+      if(/^(frac|dfrac|overset|underset)$/.test(m[1])) k=texArg(w,texArg(w,k)[1])[1]; else if(/^(text|mathrm|ce|sqrt|mathbf|overline)$/.test(m[1])) k=texArg(w,k)[1];
+      out.push(...texParse(w.slice(i,k))); i=k; continue; }
+    if(atomEnd()){
+      const ch=/^(\d*[+\-]+)$/.exec(rest); // 末尾的电荷：Na+、Ca2+、Cl-、NADP+
+      if(ch){ texAttach(out,'sup',texCharge(ch[1])); break; }
+      const d=/^\d+/.exec(rest); if(d){ texAttach(out,'sub',[{t:'txt',s:d[0]}]); i+=d[0].length; continue; }
+    }
+    if(c==='*'||c==='.'&&/[A-Za-z0-9]/.test(w[i+1]||'')){ texPushTxt(out,'·'); i++; continue; }
+    if(c==='{'){ const [g,j]=texReadGroup(w,i); texPushTxt(out,g); i=j; continue; }
+    const cp=String.fromCodePoint(w.codePointAt(i)); texPushTxt(out,cp==='-'?'−':cp); i+=cp.length;
+  }
+  return out;
+}
+function texCharge(a){ // 2+ → 2+（减号用 −）
+  if(/^[0-9]*[+\-]+$/.test(a)) return [{t:'txt',s:a.replace(/-/g,'−')}];
+  return texParse(a,{up:1});
+}
+/* ---- 排版成 HTML ---- */
+const TEX_HEAD={r:'<path d="M0 5H10M4 1.2L10 5L4 8.8"/>',l:'<path d="M0 5H10M6 1.2L0 5L6 8.8"/>',hr:'<path d="M0 5H10M4.5 1.5L10 5"/>',hl:'<path d="M0 5H10M5.5 8.5L0 5"/>',m:'<path d="M0 5H10"/>'};
+const texSvg=(k,w)=>`<svg class="${k==='m'?'m':''}" viewBox="0 0 10 10" preserveAspectRatio="${k==='m'?'none':'xMidYMid meet'}" ${k==='m'?'':`style="width:${w||'.5em'}"`}>${TEX_HEAD[k]}</svg>`;
+function texArrowLine(k){
+  if(k==='eq') return `<span class="tx-ln two"><span>${texSvg('m')}${texSvg('hr')}</span><span>${texSvg('hl')}${texSvg('m')}</span></span>`;
+  if(k==='=') return `<span class="tx-ln two" style="height:.42em"><span style="height:.2em">${texSvg('m')}</span><span style="height:.2em">${texSvg('m')}</span></span>`;
+  return `<span class="tx-ln">${k==='l'||k==='lr'?texSvg('l'):''}${texSvg('m')}${k==='r'||k==='lr'?texSvg('r'):''}</span>`;
+}
+function texNodesHTML(ns){ return ns.map(texNodeHTML).join(''); }
+function texNodeHTML(n){
+  switch(n.t){
+    case 'txt': { const h=esc(n.s).replace(/\n/g,'<br>'); return n.err?`<span class="tx-err">${h}</span>`:n.b?`<span class="tx-b">${n.it?`<i>${h}</i>`:h}</span>`:n.it?`<i>${h}</i>`:h; }
+    case 'op': return `<span class="tx-op">${esc(n.s)}</span>`;
+    case 'sp': return `<span class="tx-sp">${n.s===' '?'&nbsp;':n.s}</span>`;
+    case 'ss': { const b=texNodesHTML(n.base);
+      if(n.stack) return `<span class="tx-frac" style="font-size:1em"><span style="border:0;font-size:.68em">${texNodesHTML(n.sup||[])}</span><span>${b}</span></span>`;
+      if(n.sub&&n.sup) return `${b}<span class="tx-ss"><span>${texNodesHTML(n.sup)}</span><span>${texNodesHTML(n.sub)}</span></span>`;
+      return n.sup?`${b}<span class="tx-sup">${texNodesHTML(n.sup)}</span>`:`${b}<span class="tx-sub">${texNodesHTML(n.sub)}</span>`; }
+    case 'frac': return `<span class="tx-frac"><span>${texNodesHTML(n.n)}</span><span>${texNodesHTML(n.d)}</span></span>`;
+    case 'sqrt': return `<span class="tx-sqrt">${n.deg?`<span class="tx-sup" style="border:0;margin-right:-.3em">${texNodesHTML(n.deg)}</span>`:''}√<span>${texNodesHTML(n.a)}</span></span>`;
+    case 'line': return `<span class="${n.k==='o'?'tx-ovl':'tx-unl'}">${texNodesHTML(n.a)}</span>`;
+    case 'arr': { const up=texNodesHTML(n.up), dn=texNodesHTML(n.dn);
+      // 只有一边写了条件时，另一边放一个看不见的占位，让箭头保持在文字中线
+      const lb=(h,o)=>h?`<span class="tx-lb">${h}</span>`:`<span class="tx-lb ph">${o||'&nbsp;'}</span>`;
+      return `<span class="tx-arr">${lb(up,dn)}${texArrowLine(n.k)}${lb(dn,up)}</span>`; }
+  }
+  return '';
+}
+const TEX_CACHE=new Map();
+function texHTML(src){
+  let h=TEX_CACHE.get(src); if(h!=null) return h;
+  try{ h=`<span class="tx">${texNodesHTML(texParse(src))}</span>`; }catch(e){ h=`<span class="tx tx-err">${esc(src)}</span>`; }
+  if(TEX_CACHE.size>800) TEX_CACHE.clear(); TEX_CACHE.set(src,h); return h;
+}
+/* ---- 纯文字（搜索、查重、列表摘要用） ---- */
+const TEX_SUBC={'0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉','+':'₊','−':'₋','-':'₋','(':'₍',')':'₎'};
+const TEX_SUPC={'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹','+':'⁺','−':'⁻','-':'⁻','(':'⁽',')':'⁾'};
+function texNodesText(ns){ return ns.map(n=>{ switch(n.t){
+  case 'txt': return n.s; case 'op': return n.s==='+'||n.s==='='||n.s==='→'?` ${n.s} `:n.s; case 'sp': return ' ';
+  case 'ss': { const conv=(x,m)=>{ const t=texNodesText(x||[]); return [...t].every(c=>m[c])?[...t].map(c=>m[c]).join(''):(m===TEX_SUBC?'_':'^')+t; };
+    return texNodesText(n.base)+(n.sub?conv(n.sub,TEX_SUBC):'')+(n.sup?conv(n.sup,TEX_SUPC):''); }
+  case 'frac': return texNodesText(n.n)+'/'+texNodesText(n.d);
+  case 'sqrt': return '√'+texNodesText(n.a);
+  case 'line': return texNodesText(n.a);
+  case 'arr': { const c=[texNodesText(n.up),texNodesText(n.dn)].filter(Boolean).join('，'); return ` ${{r:'→',l:'←',lr:'↔',eq:'⇌','=':'='}[n.k]}${c?'（'+c+'）':''} `; }
+  } return ''; }).join(''); }
+function texPlain(src){ try{ return texNodesText(texParse(src)).replace(/\s+/g,' ').trim(); }catch(e){ return src; } }
+/* ---- Word 公式（OMML） ---- */
+function texOmml(src,f={}){
+  const rpr=f.sz?`<w:rPr><w:sz w:val="${f.sz}"/><w:szCs w:val="${f.sz}"/></w:rPr>`:'';
+  const run=(t,it,b)=>`<m:r><m:rPr>${it?(b?'<m:sty m:val="bi"/>':''):`<m:sty m:val="${b?'b':'p'}"/>`}</m:rPr>${rpr}<m:t xml:space="preserve">${xe(t)}</m:t></m:r>`;
+  const E=ns=>{ const x=nodes(ns); return x||run('\u200b'); };
+  const nodes=ns=>ns.map(n=>{ switch(n.t){
+    case 'txt': { const parts=[]; let cur='',ci=null;
+      for(const ch of n.s){ const it=n.it&&/[A-Za-z]/.test(ch); if(ci!==null&&it!==ci){ parts.push(run(cur,ci,n.b)); cur=''; } cur+=ch; ci=it; }
+      if(cur) parts.push(run(cur.replace(/\n/g,' '),ci,n.b)); return parts.join(''); }
+    case 'op': return run(n.s);
+    case 'sp': return run(n.s===' '?'\u2005':n.s);
+    case 'ss': if(n.stack) return `<m:limUpp><m:e>${E(n.base)}</m:e><m:lim>${E(n.sup||[])}</m:lim></m:limUpp>`;
+      if(n.sub&&n.sup) return `<m:sSubSup><m:e>${E(n.base)}</m:e><m:sub>${E(n.sub)}</m:sub><m:sup>${E(n.sup)}</m:sup></m:sSubSup>`;
+      return n.sup?`<m:sSup><m:e>${E(n.base)}</m:e><m:sup>${E(n.sup)}</m:sup></m:sSup>`:`<m:sSub><m:e>${E(n.base)}</m:e><m:sub>${E(n.sub)}</m:sub></m:sSub>`;
+    case 'frac': return `<m:f><m:num>${E(n.n)}</m:num><m:den>${E(n.d)}</m:den></m:f>`;
+    case 'sqrt': return `<m:rad><m:radPr>${n.deg?'':'<m:degHide m:val="1"/>'}</m:radPr><m:deg>${n.deg?nodes(n.deg):''}</m:deg><m:e>${E(n.a)}</m:e></m:rad>`;
+    case 'line': return `<m:bar><m:barPr><m:pos m:val="${n.k==='o'?'top':'bot'}"/></m:barPr><m:e>${E(n.a)}</m:e></m:bar>`;
+    case 'arr': { const chr={r:'→',l:'←',lr:'↔',eq:'⇌','=':'='}[n.k];
+      if(!n.up.length&&!n.dn.length) return run(` ${chr} `);
+      const pad=run('\u2002'); const up=pad+(nodes(n.up)||run('\u2003'))+pad;
+      let x=`<m:groupChr><m:groupChrPr><m:chr m:val="${chr}"/><m:pos m:val="bot"/><m:vertJc m:val="bot"/></m:groupChrPr><m:e>${up}</m:e></m:groupChr>`;
+      if(n.dn.length) x=`<m:limLow><m:e>${x}</m:e><m:lim>${nodes(n.dn)}</m:lim></m:limLow>`;
+      return run('\u2005')+x+run('\u2005'); }
+  } return ''; }).join('');
+  let body; try{ body=nodes(texParse(src)); }catch(e){ body=run(src); }
+  return `<m:oMath>${body}</m:oMath>`;
+}
+/* 复制到 Word（粘贴）时用的简单写法：上下标 + 箭头后括号写条件 */
+function texSimpleHTML(src){
+  const H=ns=>ns.map(n=>{ switch(n.t){
+    case 'txt': return n.it?`<i>${esc(n.s)}</i>`:esc(n.s); case 'op': return n.s==='+'||n.s==='='?` ${n.s} `:esc(n.s); case 'sp': return ' ';
+    case 'ss': return H(n.base)+(n.sub?`<sub>${H(n.sub)}</sub>`:'')+(n.sup?`<sup>${H(n.sup)}</sup>`:'');
+    case 'frac': return H(n.n)+'/'+H(n.d); case 'sqrt': return '√'+H(n.a); case 'line': return H(n.a);
+    case 'arr': { const c=[H(n.up),H(n.dn)].filter(Boolean).join('，'); return ` ${{r:'→',l:'←',lr:'↔',eq:'⇌','=':'='}[n.k]}${c?'（'+c+'）':''} `; }
+  } return ''; }).join('');
+  try{ return H(texParse(src)); }catch(e){ return esc(src); }
+}
+/* ---- 页面里的 <span class="tex"> 自动排版 ---- */
+function texRenderEl(el){
+  const src=el.getAttribute('data-tex')||''; if(el._tx===src&&el.firstChild) return;
+  el._tx=src; el.innerHTML=texHTML(src); el.title=el.closest('.rich[contenteditable="true"]')?'点击修改公式':'';
+  if(el.parentElement?.closest('[contenteditable="true"]')) el.setAttribute('contenteditable','false');
+}
+function texRenderIn(root){ if(root.nodeType!==1) return; if(root.matches('span.tex')) texRenderEl(root); root.querySelectorAll('span.tex').forEach(texRenderEl); }
+document.head.insertAdjacentHTML('beforeend',`<style id="texStyle">${TEX_CSS}</style>`);
+new MutationObserver(ms=>{ for(const m of ms) for(const n of m.addedNodes){ if(n.nodeType===1&&!n.closest?.('.tx')) texRenderIn(n); } }).observe(document.documentElement,{childList:true,subtree:true});
+/* 批量导入等纯文字里的 $…$ 或 \ce{…} 变成公式 */
+function texFromText(html){
+  if(!html||!/\$|\\ce\{|\\\(/.test(html)) return html;
+  const tpl=document.createElement('template'); tpl.innerHTML=html;
+  const w=document.createTreeWalker(tpl.content,NodeFilter.SHOW_TEXT); const list=[]; let n; while((n=w.nextNode())) if(!n.parentElement?.closest('.tex')) list.push(n);
+  const re=/\$([^$\n]+?)\$|\\\((.+?)\\\)|\\ce\{/g;
+  for(const t of list){ const s=t.nodeValue; if(!/\$|\\ce\{|\\\(/.test(s)) continue;
+    const frag=document.createDocumentFragment(); let last=0, m; re.lastIndex=0;
+    while((m=re.exec(s))){ let src, end;
+      if(m[0]==='\\ce{'){ const [g,j]=texReadGroup(s,m.index+3); src='\\ce{'+g+'}'; end=j; } else { src=(m[1]??m[2]).trim(); end=m.index+m[0].length; }
+      if(!src){ continue; }
+      frag.append(s.slice(last,m.index)); const sp=document.createElement('span'); sp.className='tex'; sp.setAttribute('data-tex',src); frag.append(sp); last=end; re.lastIndex=end; }
+    if(last){ frag.append(s.slice(last)); t.replaceWith(frag); } }
+  return tpl.innerHTML;
+}
+/* 常用模板 */
+const TEX_TPLS=[
+  ['光合作用（总反应式）','\\ce{6CO2 + 12H2O ->[光能][叶绿体] C6H12O6 + 6O2 + 6H2O}'],
+  ['光合作用（简式）','\\ce{CO2 + H2O ->[光能][叶绿体] (CH2O) + O2}'],
+  ['有氧呼吸','\\ce{C6H12O6 + 6H2O + 6O2 ->[酶] 6CO2 + 12H2O + 能量}'],
+  ['无氧呼吸（产酒精）','\\ce{C6H12O6 ->[酶] 2C2H5OH + 2CO2 + 少量能量}'],
+  ['无氧呼吸（产乳酸）','\\ce{C6H12O6 ->[酶] 2C3H6O3 + 少量能量}'],
+  ['ATP 与 ADP 相互转化','\\ce{ATP <=>[酶1][酶2] ADP + Pi + 能量}'],
+  ['水的光解','\\ce{2H2O ->[光能] O2 + 4H+ + 4e-}'],
+  ['NADPH 的形成','\\ce{NADP+ + H+ + 2e- ->[酶] NADPH}'],
+  ['化能合成（硝化细菌）','\\ce{2NH3 + 3O2 ->[硝化细菌] 2HNO2 + 2H2O + 能量}'],
+  ['脱水缩合（二肽）','\\ce{氨基酸 + 氨基酸 ->[酶] 二肽 + H2O}'],
+];
+const TEX_PARTS=[
+  ['箭头上下写条件','\\ce{A ->[上方条件][下方条件] B}'],
+  ['可逆反应','\\ce{A <=>[条件] B}'],
+  ['离子','\\ce{Ca^2+ + 2Cl-}'],
+  ['气体↑ 沉淀↓','\\ce{CO2 ^ + CaCO3 v}'],
+  ['分数','\\frac{1}{4}'],
+  ['上下标','X^{B}X^{b} \\times X^{b}Y'],
+  ['根号','\\sqrt{2}'],
+  ['长等号写条件','\\xlongequal{条件}'],
+];
+/* 录题时插入 / 修改公式 */
+function texDialog(el){
+  const ed=el?el.closest('.rich'):(lastRich&&lastRich.isConnected?lastRich:null);
+  if(!ed){ toast('请先点一下要插入公式的输入框'); return; }
+  const range=!el&&lastRange&&ed.contains(lastRange.startContainer)?lastRange.cloneRange():null;
+  const m=$('#modal'), groups={a:TEX_TPLS,b:TEX_PARTS};
+  const tplBtn=([l,t],g,i)=>`<button class="tex-tpl" data-g="${g}" data-i="${i}" title="${esc(t)}"><span class="tex" data-tex="${esc(t)}"></span><small>${esc(l)}</small></button>`;
+  m.innerHTML=`<div class="modal-card tex-card"><h3>${el?'修改公式':'插入公式'}</h3>
+    <div class="tex-gl">生物常用反应式</div><div class="tex-tpls">${TEX_TPLS.map((x,i)=>tplBtn(x,'a',i)).join('')}</div>
+    <div class="tex-gl">常用结构</div><div class="tex-tpls small">${TEX_PARTS.map((x,i)=>tplBtn(x,'b',i)).join('')}</div>
+    <div class="tex-gl">公式写法 <span class="hint">点上面的模板会放到这里，直接改文字就行</span></div>
+    <textarea id="texSrc" spellcheck="false" placeholder="例如：\\ce{6CO2 + 12H2O ->[光能][叶绿体] C6H12O6 + 6O2 + 6H2O}"></textarea>
+    <div class="tex-gl">预览</div><div class="tex-prev" id="texPrev"></div>
+    <details class="tex-help"><summary>写法说明</summary><table>
+      <tr><td>化学式写在 <code>\\ce{ }</code> 里，数字自动变下标</td><td><code>\\ce{C6H12O6}</code></td></tr>
+      <tr><td>系数直接写在前面</td><td><code>\\ce{6CO2}</code></td></tr>
+      <tr><td>离子的电荷</td><td><code>\\ce{Na+}</code>　<code>\\ce{Ca^2+}</code>　<code>\\ce{SO4^2-}</code></td></tr>
+      <tr><td>箭头：<code>-&gt;</code>　可逆：<code>&lt;=&gt;</code>　向左：<code>&lt;-</code></td><td><code>\\ce{A -&gt; B}</code></td></tr>
+      <tr><td>箭头上下的条件：先上后下；只写一个就在上面</td><td><code>-&gt;[光能][叶绿体]</code></td></tr>
+      <tr><td>气体 <code>^</code>、沉淀 <code>v</code>（前后空一格）</td><td><code>\\ce{CO2 ^}</code></td></tr>
+      <tr><td>各项之间、加号前后都空一格</td><td><code>\\ce{A + B -&gt; C}</code></td></tr>
+      <tr><td>\\ce 外面：上标 <code>^{ }</code>、下标 <code>_{ }</code>、分数 <code>\\frac{1}{4}</code>、乘号 <code>\\times</code></td><td><code>X^{B}X^{b}</code></td></tr>
+    </table></details>
+    <div class="btn-row" style="justify-content:flex-end">${el?'<button class="btn danger" data-tx="del" style="margin-right:auto">删除这个公式</button>':''}<button class="btn" data-tx="cancel">取消</button><button class="btn primary" data-tx="ok">${el?'保存修改':'插入'}</button></div></div>`;
+  m.hidden=false;
+  const ta=$('#texSrc',m), pv=$('#texPrev',m);
+  const upd=()=>{ const v=ta.value.trim(); pv.innerHTML=v?`<span class="tex" data-tex="${esc(v)}"></span>`:'<span style="color:var(--faint);font-size:14px">点上面的模板，或者自己输入</span>'; texRenderIn(pv); };
+  ta.value=el?el.getAttribute('data-tex')||'':''; upd(); ta.oninput=upd; ta.focus();
+  const close=()=>{ m.hidden=true; m.innerHTML=''; m.onclick=null; ta.onkeydown=null; };
+  const finish=src=>{
+    close();
+    if(el){ if(!src) el.remove(); else { el.setAttribute('data-tex',src); el._tx=null; texRenderEl(el); } }
+    else if(src) texInsert(ed,range,src);
+    ed.dispatchEvent(new Event('input',{bubbles:true}));
+  };
+  ta.onkeydown=e=>{ if(e.key==='Enter'&&(e.metaKey||e.ctrlKey)){ e.preventDefault(); finish(ta.value.trim()); } else if(e.key==='Escape'){ e.preventDefault(); e.stopPropagation(); close(); } };
+  m.onclick=e=>{
+    const t=e.target.closest('.tex-tpl');
+    if(t){ ta.value=groups[t.dataset.g][+t.dataset.i][1]; upd(); ta.focus(); const k=ta.value.search(/条件|上方条件/); if(k>=0) ta.setSelectionRange(k,k+(ta.value.startsWith('上方',k)?4:2)); return; }
+    const b=e.target.closest('[data-tx]'); if(!b) return;
+    if(b.dataset.tx==='cancel') close();
+    else if(b.dataset.tx==='del') finish('');
+    else finish(ta.value.trim());
+  };
+}
+function texInsert(ed,range,src){
+  const sp=document.createElement('span'); sp.className='tex'; sp.setAttribute('data-tex',src);
+  ed.focus(); let r=range;
+  if(!r){ r=document.createRange(); r.selectNodeContents(ed); r.collapse(false); }
+  r.deleteContents(); const z=document.createTextNode('​'); r.insertNode(z); r.insertNode(sp); texRenderEl(sp);
+  const s=getSelection(), nr=document.createRange(); nr.setStartAfter(z); nr.collapse(true); s.removeAllRanges(); s.addRange(nr);
+  lastRich=ed; lastRange=nr.cloneRange();
+}
+
 const README_TEXT=`这是「拾萃 · 高中生物好题本」的数据文件夹。
 
 bank.json  全部题目、笔记、tag、试题篮、试卷、回收站和设置（请不要手动修改）
@@ -827,8 +1181,8 @@ const isChoice=t=>t==='single'||t==='multi';
 const hasSlot=t=>t==='single'||t==='multi';
 const today=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
 const _txt=document.createElement('div');
-function htmlToText(h){ if(!h) return ''; _txt.innerHTML=h; return (_txt.textContent||'').replace(/​/g,''); }
-function hasContent(h){ return !!h && (!!htmlToText(h).trim() || /<img|<table/i.test(h)); }
+function htmlToText(h){ if(!h) return ''; _txt.innerHTML=h; if(h.includes('class="tex')) _txt.querySelectorAll('span.tex').forEach(e=>{ e.textContent=texPlain(e.getAttribute('data-tex')||''); }); return (_txt.textContent||'').replace(/​/g,''); }
+function hasContent(h){ return !!h && (!!htmlToText(h).trim() || /<img|<table|class="tex/i.test(h)); }
 let toastTimer=null;
 function toast(msg){ const t=$('#toast'); t.textContent=msg; t.hidden=false; t.style.opacity=1; clearTimeout(toastTimer); toastTimer=setTimeout(()=>{t.style.opacity=0;setTimeout(()=>t.hidden=true,200);},2200); }
 function levelText(q){ return LEVELS[q.level]||'适中'; }
@@ -871,6 +1225,7 @@ function cleanNode(node){
     if(ch.nodeType!==1){ ch.remove(); return; }
     const tag=ch.tagName;
     if(DROP.has(tag)){ ch.remove(); return; }
+    if(tag==='SPAN'&&ch.classList.contains('tex')){ const t=(ch.getAttribute('data-tex')||'').trim(); if(!t){ ch.remove(); return; } ch.textContent=''; [...ch.attributes].forEach(a=>ch.removeAttribute(a.name)); ch.setAttribute('class','tex'); ch.setAttribute('data-tex',t); return; }
     if(tag==='SPAN'&&ch.classList.contains('ans-slot')){ ch.textContent=''; [...ch.attributes].forEach(a=>{ if(a.name!=='class') ch.removeAttribute(a.name); }); ch.setAttribute('class','ans-slot'); return; }
     cleanNode(ch);
     const st=(ch.getAttribute('style')||'').toLowerCase();
@@ -995,7 +1350,7 @@ function normQ(q){
 function normalizeBank(d){
   const settings=clone(DEFAULT_SETTINGS);
   if(d.settings){ Object.assign(settings.score,d.settings.score||{}); if(d.settings.grade) settings.grade=d.settings.grade; if(d.settings.print&&typeof d.settings.print==='object') settings.print=d.settings.print; if(d.settings.autoUpdate===false) settings.autoUpdate=false;
-    for(const k of ['theme','mode','imgMax','achv','achvEv','achvOff','daily','dailyLog','basketTarget','lastClass']) if(d.settings[k]!==undefined) settings[k]=d.settings[k];
+    for(const k of ['mode','imgMax','achv','achvEv','achvOff','daily','dailyLog','basketTarget','lastClass']) if(d.settings[k]!==undefined) settings[k]=d.settings[k];
     if(Array.isArray(d.settings.rosters)) settings.rosters=d.settings.rosters.filter(r=>r&&r.id&&Array.isArray(r.names)).map(r=>({id:r.id,name:String(r.name||'未命名班级'),names:r.names.map(String).filter(Boolean)})); }
   bank={version:APP_VERSION,settings,topics:[],tags:[],questions:[],notes:[],basket:[],papers:[],basketPaper:'',exams:[],trash:[],sets:[],nextNo:0,secNext:{}};
   bank.nextNo=Number.isInteger(d.nextNo)?d.nextNo:0;
@@ -1344,12 +1699,12 @@ function trashTitle(t){
 }
 function renderTrash(){
   purgeTrash();
-  const head=`<div class="view-head"><div><div class="crumb">删除的题目、笔记和整卷会在这里保留 ${TRASH_DAYS} 天，之后自动清除</div><h2>回收站</h2></div><span class="sp"></span>
+  const head=`<div class="view-head"><div><div class="crumb">删除的题目、笔记和试卷库里的试卷会在这里保留 ${TRASH_DAYS} 天，之后自动清除</div><h2>回收站</h2></div><span class="sp"></span>
     ${bank.trash.length?'<button class="btn small danger" data-act="trashempty">清空回收站</button>':''}</div>`;
   if(!bank.trash.length){ setMain(head+'<div class="empty">回收站是空的。</div>'); return; }
   setMain(head+bank.trash.map((t,i)=>{ const it=t.item; const sec=SECTIONS[t.kind==='q'?it.primary:it.sec];
     const left=Math.max(1,Math.ceil((t.deleted+TRASH_DAYS*864e5-Date.now())/864e5));
-    return `<div class="titem" data-ti="${i}"><div class="ti-main"><div class="ti-meta">${t.kind==='q'?`<span class="badge t-${it.type}">${TYPES[it.type]}</span>`:`<span class="badge">${t.kind==='e'?'整卷':'笔记'}</span>`}
+    return `<div class="titem" data-ti="${i}"><div class="ti-main"><div class="ti-meta">${t.kind==='q'?`<span class="badge t-${it.type}">${TYPES[it.type]}</span>`:`<span class="badge">${t.kind==='e'?'试卷库':'笔记'}</span>`}
       ${t.kind==='q'&&it.source?`<span class="badge grade">${esc(sourceText(it))}</span>`:''}<span class="meta-sec">${esc(sec?sec.path:'')}</span></div>
       <div class="ti-text">${esc(trashTitle(t))}</div><div class="hint">${new Date(t.deleted).toLocaleString('zh-CN',{hour12:false})} 删除 · 还会保留 ${left} 天</div></div>
       <div class="btn-row"><button class="btn small" data-act="trashrestore">恢复</button><button class="btn small ghost danger" data-act="trashdel">彻底删除</button></div></div>`; }).join(''));
@@ -1443,25 +1798,27 @@ function renderHome(){
   const lastQ=bank.questions.reduce((a,q)=>!a||q.created>a.created?q:a,null); // 没进过任何一节时，默认录到最近录入的那一节
   const sec=SECTIONS[ui.sec]||SECTIONS[lastQ?.primary]||SECTIONS['1-1-1'];
   const bs=paperStats({entries:bank.basket}); const bp=bank.papers.find(p=>p.id===bank.basketPaper);
-  const acts=[
-    {act:'homenew',t:'录入新题',h:`录到：${sec.short}（打开后可以改）`,main:true},
-    {nav:'notes',t:'知识笔记',h:bank.notes.length?`${bank.notes.length} 篇，按章节顺序排列`:'还没有笔记'},
-    {act:'homesearch',t:'搜索题目',h:'按关键词、tag、来源查找'},
-    {nav:'basket',t:'试题篮 · 组卷',h:bank.basket.length?`${bs.n} 道题 · 共 ${fmt(bs.total)} 分${bp?` · 「${esc(bp.name)}」`:''}`:'还是空的'},
-    {nav:'exams',t:'整卷',h:bank.exams.length?`${bank.exams.length} 份整卷`:'导入或录入整份外校试卷'},
-    {nav:'papers',t:'试卷存档',h:bank.papers.length?`${bank.papers.length} 份试卷`:'还没有保存过试卷'},
-    {act:'import',t:'导入题目',h:'导入 .json 题目文件'},
-    {act:'export',t:'导出完整备份',h:'含图片，可存到 U 盘或网盘'},
-    {act:'gotrash',t:'回收站',h:bank.trash.length?`${bank.trash.length} 项，保留 ${TRASH_DAYS} 天`:'空'},
-    {act:'classroom',t:'课堂抽题',h:'全屏放题、计时、随机点名'},
-    {nav:'graph',t:'考点关系图',h:'哪些考点常一起考，哪些只单独考过'},
-    {nav:'recap',t:'学期回顾',h:termRange('term').label},
+  const groups=[
+    {t:'录题与数据',acts:[
+      {act:'homenew',t:'录入新题',h:`录到：${sec.short}（打开后可以改）`,main:true},
+      {act:'import',t:'批量导入',h:'导入 .json 题目文件'},
+      {act:'export',t:'导出完整备份',h:'含图片，可存到 U 盘或网盘'},
+      {act:'gotrash',t:'回收站',h:bank.trash.length?`${bank.trash.length} 项，保留 ${TRASH_DAYS} 天`:'空'},
+    ]},
+    {t:'知识整理',acts:[
+      {nav:'notes',t:'知识笔记',h:bank.notes.length?`${bank.notes.length} 篇，按章节顺序排列`:'还没有笔记'},
+      {nav:'graph',t:'考点关系图',h:'哪些考点常一起考，哪些只单独考过'},
+    ]},
+    {t:'课堂与回顾',acts:[
+      {act:'classroom',t:'课堂抽题',h:'全屏放题、计时、随机点名'},
+      {nav:'recap',t:'学期回顾',h:termRange('term').label},
+    ]},
   ];
   const todo=[['missed','道曾做错的题',cnt(isMissed)],['pending','道 tag 待确认',cnt(q=>q.tagsPending)],['unset','道难度未评定',cnt(q=>q.levelUnset)],['review','道有导入备注',cnt(q=>!!q.review)]];
   const recentQ=[...qs].sort((a,b)=>b.created-a.created).slice(0,6);
   const recentP=[...bank.papers].sort((a,b)=>(b.date||'').localeCompare(a.date||'')||b.created-a.created).slice(0,4);
   setMain(`<div class="hero"><h2>工作台</h2><div class="muted">${d.getMonth()+1} 月 ${d.getDate()} 日 星期${WEEK[d.getDay()]} · 共 ${qs.length} 道题、${bank.notes.length} 篇笔记 · 数据文件夹：${esc(store.name)}${ui.grade!=='all'?` · 当前只看 <b>${ui.grade}</b>`:''}</div></div>
-  <div class="ws-acts">${acts.map(a=>`<button class="ws-act${a.main?' main':''}" ${a.nav?`data-nav="${a.nav}"`:`data-act="${a.act}" data-sec="${sec.id}"`}><b>${a.t}</b><span>${a.h}</span></button>`).join('')}</div>
+  <div class="ws-groups">${groups.map(g=>`<div class="ws-group" style="--n:${g.acts.length}"><div class="ws-gtitle">${g.t}</div>${g.acts.map(a=>`<button class="ws-act${a.main?' main':''}" ${a.nav?`data-nav="${a.nav}"`:`data-act="${a.act}" data-sec="${sec.id}"`}><b>${a.t}</b><span>${a.h}</span></button>`).join('')}</div>`).join('')}</div>
   <div class="ws-title">待处理</div>
   <div class="stat-row" style="margin-top:0">${todo.map(([v,l,n])=>`<div class="stat link${n?'':' zero'}" data-act="gostatus" data-v="${v}"><div class="sv">${n}</div><div class="sl">${l}</div></div>`).join('')}</div>
   ${dailyHTML()}
@@ -1477,6 +1834,7 @@ function renderHome(){
     <li>左侧顶部可以切换“全部 / 高一 / 高二 / 高三”，目录、题数、列表和搜索都会跟着切换。</li>
     <li>每一节分“题目”和“笔记”两栏；顶部的“笔记”按章节顺序列出全部笔记。跨书的内容放在“综合专题”里，专题由你自己新建。</li>
     <li>选择题、判断题题干末尾的（　）会自动加上，不用自己输入。填空题：选中答案文字，点工具栏的“挖空”。</li>
+    <li>化学式、反应式：点工具栏的“公式”，选一个模板（如光合作用反应式）再直接改文字，箭头上下可以写反应条件；已插入的公式点一下就能修改。</li>
     <li>录题时可以标记自己曾经误选的选项、判错的判断、答错的空：它们在答案区用蓝色标出，难度默认归为“较难”，还能用“曾做错”筛选出来。题干里不会显示答案。</li>
     <li>勾选“选入试题篮”，在试题篮里预排版：拖动 ⋮⋮ 调整顺序，点击题目查看答案解析，“复制”后可以直接粘贴到 Word。</li>
     <li>点右上角的“工作台”（或左上角“拾萃”）随时回到工作台。</li>
@@ -1491,7 +1849,7 @@ function filterBarHTML(f){
    <div class="f-row"><span class="f-lbl">题型</span>${TYPE_ORDER.map(t=>`<button class="chip ${f.types.includes(t)?'on':''}" data-act="ftype" data-v="${t}">${TYPES[t]}</button>`).join('')}</div>
    <div class="f-row"><span class="f-lbl">难度</span>${[1,2,3,4,5].map(n=>`<button class="chip ${f.levels.includes(n)?'on':''}" data-act="flevel" data-v="${n}">${LEVELS[n]}</button>`).join('')}</div>
    <div class="f-row"><span class="f-lbl">状态</span>${STATUS.map(([v,l])=>`<button class="chip ${f.status.includes(v)?'on':''}" data-act="fstatus" data-v="${v}">${l}</button>`).join('')}</div>
-   <div class="f-row"><span class="f-lbl">来源</span><input data-fin="source" value="${esc(f.source)}" placeholder="如：2026海安高三期初" data-srcac autocomplete="off" style="width:230px">
+   <div class="f-row"><span class="f-lbl">来源</span><input data-fin="source" value="${esc(f.source)}" placeholder="如：2026南京高三零模" data-srcac autocomplete="off" style="width:230px">
      <select data-fin="srcYear"><option value="">全部年份</option>${srcYears().map(y=>`<option ${f.srcYear===y?'selected':''}>${y}</option>`).join('')}</select>
      <select data-fin="srcKind"><option value="">全部类型</option>${SRC_KINDS.map(k=>`<option ${f.srcKind===k?'selected':''}>${k}</option>`).join('')}</select>
      <span class="f-gap"></span><span class="f-lbl">排序</span><select data-fin="sort">${[['old','录入顺序'],['new','最新录入在前'],['easy','由易到难'],['hard','由难到易']].map(([v,l])=>`<option value="${v}" ${f.sort===v?'selected':''}>${l}</option>`).join('')}</select>
@@ -1888,9 +2246,9 @@ function examStats(ex){ const qs=exQs(ex); return {n:qs.length,got:qs.filter(inB
 function renderExams(){ const ex=examById(ui.exam); if(ex) renderExam(ex); else{ ui.exam=null; renderExamList(); } }
 function renderExamList(){
   const list=[...bank.exams].sort((a,b)=>(b.date||'').localeCompare(a.date||'')||b.created-a.created);
-  const head=`<div class="view-head"><div><div class="crumb">整份试卷按原卷顺序保存在这里，每道题的显示方式和题库里的题一样；卷里的题不会进入题库，看中的题再点“收进题库”</div><h2>整卷</h2></div><span class="sp"></span>
-    <button class="btn" data-act="eximportnew">导入整卷文件</button><button class="btn primary" data-act="exnew">新建整卷</button></div>`;
-  if(!list.length){ setMain(head+'<div class="empty">还没有整卷。<br>点“新建整卷”后逐题录入，或者点“导入整卷文件”导入整理好的 .json 文件。</div>'); return; }
+  const head=`<div class="view-head"><div><div class="crumb">整份试卷按原卷顺序保存在这里，每道题的显示方式和题库里的题一样；卷里的题不会进入题库，看中的题再点“收进题库”</div><h2>试卷库</h2></div><span class="sp"></span>
+    <button class="btn" data-act="eximportnew">导入试卷文件</button><button class="btn primary" data-act="exnew">新建试卷</button></div>`;
+  if(!list.length){ setMain(head+'<div class="empty">试卷库还是空的。<br>点“新建试卷”后逐题录入，或者点“导入试卷文件”导入整理好的 .json 文件。</div>'); return; }
   setMain(head+list.map(ex=>{ const st=examStats(ex);
     return `<div class="paper" data-xid="${ex.id}"><div class="pp-main"><div class="pp-name">${esc(ex.name)}</div>
       <div class="hint">${ex.date?ex.date+' · ':''}${ex.grade} · ${st.n} 道题${st.got?` · 已收进题库 ${st.got} 道`:''}</div></div>
@@ -1912,9 +2270,9 @@ function exItemHTML(ex,it,no){
 }
 function renderExam(ex){
   const st=examStats(ex); let no=0;
-  setMain(`<div class="view-head"><div><div class="crumb"><a href="#" data-act="exback">整卷</a> ›</div><h2>${esc(ex.name)}</h2>
+  setMain(`<div class="view-head"><div><div class="crumb"><a href="#" data-act="exback">试卷库</a> ›</div><h2>${esc(ex.name)}</h2>
      <div class="hint" style="margin-top:4px">${ex.date?ex.date+' · ':''}${ex.grade} · ${st.n} 道题 · 已收进题库 ${st.got} 道${ex.note?` · ${esc(ex.note)}`:''}</div></div><span class="sp"></span>
-     <button class="btn ghost" data-act="exinfo">改信息</button><button class="btn ghost danger" data-act="exdelexam">删除整卷</button></div>
+     <button class="btn ghost" data-act="exinfo">改信息</button><button class="btn ghost danger" data-act="exdelexam">删除这套试卷</button></div>
    <div class="panel ex-bar"><button class="btn primary small" data-act="exadd">＋ 录入题目</button><button class="btn small" data-act="exaddhead">＋ 大题标题</button><button class="btn small" data-act="eximport">导入题目文件</button>
      <span class="sp"></span><button class="btn small ${ui.exAll?'on':''}" data-act="exall">${ui.exAll?'全部收起答案':'全部展开答案'}</button></div>
    ${ex.items.length?ex.items.map(it=>exItemHTML(ex,it,it.kind==='head'?0:++no)).join(''):'<div class="empty">这张卷子还没有题。<br>点“录入题目”逐题录入，或者“导入题目文件”。大题标题（如“一、单项选择题”）可以用“＋ 大题标题”加上。</div>'}
@@ -1923,7 +2281,7 @@ function renderExam(ex){
 }
 function examForm(ex){ return new Promise(res=>{
   const m=$('#modal');
-  m.innerHTML=`<div class="modal-card"><h3>${ex?'修改整卷信息':'新建整卷'}</h3>
+  m.innerHTML=`<div class="modal-card"><h3>${ex?'修改试卷信息':'新建试卷'}</h3>
     <label class="form-row"><span>试卷名称</span><input id="xfName" value="${esc(ex?ex.name:'')}" placeholder="例如：2026 南通一模" style="flex:1"></label>
     <div class="form-row"><span>年级</span><div class="seg" id="xfGrade">${GRADES.map(g=>`<button data-g="${g}" class="${(ex?ex.grade:(ui.grade!=='all'?ui.grade:ui.lastGrade))===g?'on':''}">${g}</button>`).join('')}</div></div>
     <label class="form-row"><span>考试日期</span><input id="xfDate" type="date" value="${esc(ex?ex.date:'')}"></label>
@@ -1944,7 +2302,7 @@ function saveExamItem(d,andNew){
   const it=normExamItem(clone(d)); const i=ex.items.findIndex(x=>x.id===it.id);
   let at; if(i>=0){ ex.items[i]=it; at=i; } else{ at=Math.min(Math.max(0,pos??ex.items.length),ex.items.length); ex.items.splice(at,0,it); }
   ex.updated=Date.now(); persist(); ui.lastType=it.type;
-  closeEditor(); render(); toast(i>=0?'已保存修改':'已保存到整卷');
+  closeEditor(); render(); toast(i>=0?'已保存修改':'已保存到试卷库');
   if(andNew) openExamEditor(ex,at+1);
 }
 function collectExamItem(ex,it,no){
@@ -1973,12 +2331,12 @@ async function importExam(data,ex,fname){
   }
   if(isNew) bank.exams.push(ex); ex.updated=Date.now(); persist(); setStatus('');
   ui.exam=ex.id; ui.view='exams'; render(true);
-  alert(`${isNew?`已新建整卷「${ex.name}」：`:'导入完成：'}${n} 道题${nh?`、${nh} 个大题标题`:''}${errs.length?`；失败 ${errs.length} 项：\n`+errs.slice(0,12).join('\n'):''}`);
+  alert(`${isNew?`已新建试卷「${ex.name}」：`:'导入完成：'}${n} 道题${nh?`、${nh} 个大题标题`:''}${errs.length?`；失败 ${errs.length} 项：\n`+errs.slice(0,12).join('\n'):''}`);
 }
 async function pickExamFile(ex){
   const file=await pickFile('.json,application/json'); if(!file) return;
   let data; try{ data=JSON.parse(await file.text()); }catch(e){ alert('这个文件不是有效的 JSON 文件。'); return; }
-  if(data.format!=='qbank-exam'&&data.format!=='qbank-import'){ alert('请选择整卷文件（qbank-exam）或题目导入文件（qbank-import）。'); return; }
+  if(data.format!=='qbank-exam'&&data.format!=='qbank-import'){ alert('请选择试卷文件（qbank-exam）或题目导入文件（qbank-import）。'); return; }
   await importExam(data,ex,file.name);
 }
 async function examAction(act,a){
@@ -1994,7 +2352,7 @@ async function examAction(act,a){
     case 'exinfo': { const v=await examForm(ex); if(!v) return; Object.assign(ex,v,{updated:Date.now()}); persist(); render(); break; }
     case 'exdelexam': {
       const st=examStats(ex);
-      const ok=await choose('删除整卷',`确定删除整卷「${ex.name}」吗？删除后会放进回收站，${TRASH_DAYS} 天内可以恢复。${st.got?`\n已收进题库的 ${st.got} 道题不受影响。`:''}`,[{label:'取消',value:false},{label:'删除',value:true,danger:true}]); if(!ok) return;
+      const ok=await choose('删除试卷',`确定删除试卷「${ex.name}」吗？删除后会放进回收站，${TRASH_DAYS} 天内可以恢复。${st.got?`\n已收进题库的 ${st.got} 道题不受影响。`:''}`,[{label:'取消',value:false},{label:'删除',value:true,danger:true}]); if(!ok) return;
       bank.exams=bank.exams.filter(x=>x!==ex); bank.trash.unshift({kind:'e',deleted:Date.now(),item:ex}); persist(); go('exams',{exam:null}); toast('已移到回收站'); break; }
     case 'exadd': openExamEditor(ex,ex.items.length); break;
     case 'exinsert': openExamEditor(ex,idx+1); break;
@@ -2005,7 +2363,7 @@ async function examAction(act,a){
       ex.updated=Date.now(); persist(); render(); break; }
     case 'exup': case 'exdown': { const j=act==='exup'?idx-1:idx+1; if(j<0||j>=ex.items.length) return; [ex.items[idx],ex.items[j]]=[ex.items[j],ex.items[idx]]; ex.updated=Date.now(); persist(); render(); break; }
     case 'exdel': {
-      const ok=await choose(it.kind==='head'?'删除大题标题':'删除整卷里的题',it.kind==='head'?`确定删除标题「${it.text}」吗？下面的题不受影响。`:`确定从整卷里删除第 ${noOf(it)} 题吗？${inBankQ(it)?'题库里收进的那道题不受影响。':''}`,[{label:'取消',value:false},{label:'删除',value:true,danger:true}]); if(!ok) return;
+      const ok=await choose(it.kind==='head'?'删除大题标题':'删除卷中的题',it.kind==='head'?`确定删除标题「${it.text}」吗？下面的题不受影响。`:`确定从这套试卷里删除第 ${noOf(it)} 题吗？${inBankQ(it)?'题库里收进的那道题不受影响。':''}`,[{label:'取消',value:false},{label:'删除',value:true,danger:true}]); if(!ok) return;
       ex.items.splice(idx,1); ex.updated=Date.now(); persist(); render(); break; }
     case 'exans': { const open=!(ui.exAll||ui.exOpen.has(it.id)); if(ui.exAll){ ui.exAll=false; exQs(ex).forEach(x=>ui.exOpen.add(x.id)); } open?ui.exOpen.add(it.id):ui.exOpen.delete(it.id); render(); break; }
     case 'exall': ui.exAll=!ui.exAll; ui.exOpen.clear(); render(); break;
@@ -2021,7 +2379,7 @@ const paperOf=a=>bank.papers.find(p=>p.id===a.closest('[data-pid]')?.dataset.pid
 function paperStats(p){ let n=0,total=0,miss=0; for(const e of p.entries){ const q=qById(e.qid); if(!q){ miss++; continue; } n++; total+=entryScore(clone(e),q); } return {n,total,miss}; }
 function renderPapers(){
   const list=[...bank.papers].sort((a,b)=>(b.date||'').localeCompare(a.date||'')||b.created-a.created);
-  const head=`<div class="view-head"><div><div class="crumb">在试题篮里组好卷后点“保存为试卷”，试卷就会出现在这里</div><h2>试卷</h2></div></div>`;
+  const head=`<div class="view-head"><div><div class="crumb">在试题篮里组好卷后点“保存为试卷”，就会出现在这里</div><h2>我的组卷</h2></div></div>`;
   if(!list.length){ setMain(head+'<div class="empty">还没有保存过试卷。<br>在试题篮里组好卷后，点“保存为试卷”。</div>'); return; }
   setMain(head+list.map(p=>{ const st=paperStats(p);
     return `<div class="paper" data-pid="${p.id}"><div class="pp-main"><div class="pp-name">${esc(p.name)}${bank.basketPaper===p.id?' <span class="badge used">试题篮中</span>':''}</div>
@@ -2272,6 +2630,7 @@ class DocxWriter{
       if(tag==='BR'){ runs+=inline?dxRun(' ',f):'<w:r><w:br/></w:r>'; has=true; continue; }
       if(tag==='P'||tag==='DIV'){ if(!inline&&has&&runs!==pre) flush(); walk(ch,f); flush(); continue; }
       if(tag==='TABLE'){ if(inline) continue; flush(); out.push(this.table(ch,cw)); continue; }
+      if(tag==='SPAN'&&ch.classList.contains('tex')){ runs+=texOmml(ch.getAttribute('data-tex')||'',f); has=true; continue; }
       if(tag==='IMG'){ const r=this.img(ch.dataset.img,cw,parseInt(ch.getAttribute('width'),10)); if(!r) continue; if(inline){ runs+=r; has=true; continue; } flush(); out.push(dxP(r,{...p,keepLines:true})); continue; }
       const g={...f};
       if(tag==='B'||tag==='STRONG') g.b=1; else if(tag==='I'||tag==='EM') g.i=1; else if(tag==='U') g.u=1;
@@ -2410,7 +2769,7 @@ class DocxWriter{
     return zipStore(files,'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
   }
 }
-const DX_NS='xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"';
+const DX_NS='xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"';
 async function exportDocx(list,o){
   setStatus('正在生成 Word 文件…');
   let blob; try{ blob=await new DocxWriter(o).build(paperModel(list,o)); }
@@ -2462,6 +2821,7 @@ async function copyHTML(html){
     try{ const b=await store.imageBlob(img.dataset.img); const bmp=await createImageBitmap(b); img.src=await blobToDataURL(b); img.width=imgDispW(img,bmp.width); img.removeAttribute('data-img'); }
     catch(e){ img.remove(); }
   }
+  d.querySelectorAll('span.tex').forEach(e=>{ e.outerHTML=texSimpleHTML(e.getAttribute('data-tex')||''); });
   d.querySelectorAll('table').forEach(t=>{ t.setAttribute('border','1'); t.setAttribute('cellspacing','0'); t.style.borderCollapse='collapse'; });
   d.querySelectorAll('td,th').forEach(c=>c.style.padding='2px 8px');
   const out=d.innerHTML;
@@ -2786,7 +3146,7 @@ function resolveType(x){
   for(const [k,v] of [['判断','judge'],['单选','single'],['多选','multi'],['不定项','multi'],['填空','fill'],['实验','exp'],['解答','answer'],['非选择','answer'],['简答','answer']]) if(x.includes(k)) return v;
   return null;
 }
-function toHTML(x){ x=String(x??''); if(!x) return ''; return /<[a-z][\s\S]*>/i.test(x)?x:esc(x).replace(/\n/g,'<br>'); }
+function toHTML(x){ x=String(x??''); if(!x) return ''; return texFromText(/<[a-z][\s\S]*>/i.test(x)?x:esc(x).replace(/\n/g,'<br>')); }
 async function extractDataImages(html){
   if(!/<img/i.test(html)) return html;
   const tpl=document.createElement('template'); tpl.innerHTML=html;
@@ -2990,7 +3350,8 @@ const CARD_THEMES={clay:['陶土','#c96442','#f7ebe4','#fbf7f0'],leaf:['叶绿',
 const CARD_TITLES=['好题分享','每日一题','课堂练习','易错题'];
 function shareCardHTML(q,o){
   const [,ac,aw,bg]=CARD_THEMES[o.theme]||CARD_THEMES.clay; const S=SECTIONS[q.primary]; const src=sourceText(q);
-  const css=`.sc-card{width:720px;box-sizing:border-box;background:${bg};color:#2b2a26;font:16px/1.85 -apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;padding:0 0 4px;border-radius:0}
+  const css=TEX_CSS+`
+.sc-card{width:720px;box-sizing:border-box;background:${bg};color:#2b2a26;font:16px/1.85 -apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;padding:0 0 4px;border-radius:0}
   .sc-card *{box-sizing:border-box}
   .sc-card .sc-head{background:${ac};color:#fff;padding:22px 34px 18px;position:relative;overflow:hidden}
   .sc-card .sc-head .sc-t{font-family:"Songti SC","STSong",serif;font-size:30px;font-weight:700;letter-spacing:.08em;line-height:1.3}
@@ -3018,7 +3379,7 @@ function shareCardHTML(q,o){
 }
 async function cardBlob(q,o){
   const host=document.createElement('div'); host.style.cssText='position:fixed;left:-10000px;top:0;width:720px;pointer-events:none';
-  host.innerHTML=shareCardHTML(q,o); document.body.appendChild(host);
+  host.innerHTML=shareCardHTML(q,o); document.body.appendChild(host); texRenderIn(host);
   try{
     const el=host.firstElementChild;
     for(const img of [...el.querySelectorAll('img[data-img]')]){ try{ img.src=await blobToDataURL(await store.imageBlob(img.dataset.img)); await img.decode(); if(img.naturalWidth) img.style.width=Math.min(620,imgDispW(img,img.naturalWidth))+'px'; }catch(e){ img.remove(); } }
@@ -3031,7 +3392,7 @@ async function cardBlob(q,o){
   }finally{ host.remove(); }
 }
 function cardDialog(q,preset){
-  const o=Object.assign({title:'好题分享',ans:false,theme:bank.settings.theme&&CARD_THEMES[bank.settings.theme]?bank.settings.theme:'clay',date:''},preset||{});
+  const o=Object.assign({title:'好题分享',ans:false,theme:'clay',date:''},preset||{});
   const m=$('#modal'); let blob=null, url='';
   m.innerHTML=`<div class="modal-card card-card"><h3>分享卡片</h3><p class="hint" style="margin:0 0 8px">把这道题排成一张图片，可以发到班级群，或者放进课件。答案默认不放，要一起分享时再勾选。</p>
     <div class="card-opts"><div class="seg small" id="cdTitle">${CARD_TITLES.map(t=>`<button data-t="${t}" class="${o.title===t?'on':''}">${t}</button>`).join('')}</div>
@@ -3254,7 +3615,7 @@ function renderRecap(){
      <div class="stat"><div class="sv">${papers.length}</div><div class="sl">出过的试卷</div></div>
      <div class="stat"><div class="sv">${talks.length}</div><div class="sl">讲题次数${talkQ?`（${talkQ} 道题）`:''}</div></div>
      <div class="stat"><div class="sv">${notes.length}</div><div class="sl">写下的笔记</div></div>
-     <div class="stat"><div class="sv">${exams.length}</div><div class="sl">录入的整卷</div></div>
+     <div class="stat"><div class="sv">${exams.length}</div><div class="sl">试卷库里的试卷</div></div>
     </div>
     ${qs.length?`<div class="muted" style="margin-top:8px">${busy?`最忙的一天是 ${+busy[0].slice(5,7)} 月 ${+busy[0].slice(8)} 日，一天收了 ${busy[1]} 道题。`:''}${talkCls.size?` 在 ${[...talkCls].map(esc).join('、')} 讲过题。`:''}</div>`:'<div class="muted" style="margin-top:8px">这段时间还没有录题。</div>'}</div>
    <div class="recap-cols">
@@ -3461,12 +3822,11 @@ function bindGraph(){
     else if(t.dataset.gq){ const ids=t.dataset.gq.split(','); ui.sf=freshFilter(); ui.sf.tags=ids; if(ids.length>1) ui.sf.tagMode='and'; go('search'); } });
 }
 
-/* ================= 外观：配色和深色模式 ================= */
-const THEMES=[['clay','陶土','#c96442'],['leaf','叶绿','#5f8a4e'],['sea','海蓝','#3f76a8'],['violet','黛紫','#7d5fa6'],['ink','墨灰','#4f5560']];
+/* ================= 外观：深色模式（配色只有陶土） ================= */
 const darkMQ=window.matchMedia?.('(prefers-color-scheme: dark)');
 function applyTheme(){
   const s=bank?.settings||{}, r=document.documentElement;
-  if(s.theme&&s.theme!=='clay') r.dataset.theme=s.theme; else delete r.dataset.theme;
+  delete r.dataset.theme; // 旧版选过的其他配色不再生效
   const dark=s.mode==='dark'||(s.mode==='auto'&&darkMQ?.matches);
   if(dark) r.dataset.mode='dark'; else delete r.dataset.mode;
   r.style.setProperty('--img-max',imgMaxPx()+'px');
@@ -3478,8 +3838,7 @@ function themePanelHTML(){
     <div class="form-row"><span>默认宽度</span><div class="seg small">${[[300,'小'],[420,'中'],[560,'大'],[1000,'整行']].map(([v,l])=>`<button data-act="setimgmax" data-v="${v}" class="${imgMaxPx()===v?'on':''}">${l}</button>`).join('')}</div></div>
     <p class="hint" style="margin:8px 0 0">单张图片：录题时或在题目列表里点一下图片，用出现的“小 / 中 / 大 / 整行”按钮或＋－调整，也可以拖图片右下角的小方块；点“默认”恢复为这里的宽度。</p></div>
   <div class="panel"><div class="panel-title">外观 <span class="hint">只改变界面颜色，导出的试卷不受影响</span></div>
-    <div class="swatches">${THEMES.map(([k,l,c])=>`<div class="swatch ${(s.theme||'clay')===k?'on':''}" data-act="settheme" data-v="${k}"><i style="background:linear-gradient(135deg,${c} 0 55%,${c}33 55%)"></i>${l}</div>`).join('')}</div>
-    <div class="form-row" style="margin-top:10px"><span>明暗</span><div class="seg small">${[['light','浅色'],['dark','深色'],['auto','跟随系统']].map(([v,l])=>`<button data-act="setmode" data-v="${v}" class="${(s.mode||'light')===v?'on':''}">${l}</button>`).join('')}</div></div></div>`;
+    <div class="form-row"><span>明暗</span><div class="seg small">${[['light','浅色'],['dark','深色'],['auto','跟随系统']].map(([v,l])=>`<button data-act="setmode" data-v="${v}" class="${(s.mode||'light')===v?'on':''}">${l}</button>`).join('')}</div></div></div>`;
 }
 
 /* ================= 小成就 ================= */
@@ -3498,7 +3857,7 @@ const ACHV=[
   {id:'note10',icon:'📝',name:'勤做笔记',desc:'写了 10 篇知识笔记',ok:()=>bank.notes.length>=10},
   {id:'paper1',icon:'📄',name:'第一份试卷',desc:'保存第一份试卷',ok:()=>bank.papers.length>=1},
   {id:'paper10',icon:'🗂️',name:'十份试卷',desc:'保存了 10 份试卷',ok:()=>bank.papers.length>=10},
-  {id:'exam1',icon:'🧾',name:'整卷收藏家',desc:'录入第一份整卷',ok:()=>bank.exams.length>=1},
+  {id:'exam1',icon:'🧾',name:'试卷收藏家',desc:'往试卷库里录入第一套试卷',ok:()=>bank.exams.length>=1},
   {id:'taught1',icon:'🎤',name:'开讲啦',desc:'第一次记下“已讲过”',ok:()=>bank.questions.some(q=>q.taught.length)},
   {id:'taught100',icon:'🎓',name:'百题讲评',desc:'累计记下 100 次讲题',ok:()=>bank.questions.reduce((a,q)=>a+q.taught.length,0)>=100},
   {id:'set1',icon:'⭐',name:'我的题集',desc:'保存第一个题集',ok:()=>bank.sets.length>=1},
@@ -3580,7 +3939,7 @@ main.addEventListener('click',async e=>{
     case 'notecopy': copyHTML(`<div><b>${esc(note.title)}</b></div>`+note.body); break;
     case 'notedel': { const ok=await choose('删除笔记',`确定删除笔记「${note.title}」吗？删除后会放进回收站，${TRASH_DAYS} 天内可以恢复。`,[{label:'取消',value:false},{label:'删除',value:true,danger:true}]); if(!ok) return; trashNote(note); persist(); render(); toast('已移到回收站'); break; }
     case 'gotrash': go('trash'); break;
-    case 'trashrestore': { const i=+a.closest('[data-ti]').dataset.ti; const t=bank.trash[i]; restoreTrash(i); render(); toast(t.kind==='q'?'题目已恢复':t.kind==='e'?'整卷已恢复':'笔记已恢复'); break; }
+    case 'trashrestore': { const i=+a.closest('[data-ti]').dataset.ti; const t=bank.trash[i]; restoreTrash(i); render(); toast(t.kind==='q'?'题目已恢复':t.kind==='e'?'试卷已恢复':'笔记已恢复'); break; }
     case 'trashdel': { const i=+a.closest('[data-ti]').dataset.ti; const ok=await choose('彻底删除','彻底删除后无法再从回收站恢复，确定吗？',[{label:'取消',value:false},{label:'彻底删除',value:true,danger:true}]); if(!ok) return; bank.trash.splice(i,1); persist(); render(); break; }
     case 'trashempty': { const ok=await choose('清空回收站',`确定彻底删除回收站里的 ${bank.trash.length} 项内容吗？此操作无法撤销。`,[{label:'取消',value:false},{label:'清空',value:true,danger:true}]); if(!ok) return; bank.trash=[]; persist(); render(); break; }
     case 'tagtoggle': case 'cardtag': {
@@ -3669,7 +4028,6 @@ main.addEventListener('click',async e=>{
     case 'recaprange': ui.recapRange=a.dataset.v; render(); break;
     case 'recaptag': { e.preventDefault(); ui.sf=freshFilter(); ui.sf.tags=[a.dataset.id]; ui.sf.status=['missed']; go('search'); break; }
     case 'recapq': { e.preventDefault(); ui.sf=freshFilter(); const v=a.dataset.no; ui.sf.keyword=/^\d+$/.test(v)?'#'+v:v; go('search'); break; }
-    case 'settheme': bank.settings.theme=a.dataset.v; applyTheme(); persist(); render(); break;
     case 'setmode': bank.settings.mode=a.dataset.v; applyTheme(); persist(); render(); break;
     case 'setimgmax': bank.settings.imgMax=+a.dataset.v; applyTheme(); persist(); render(); break;
     case 'rosteradd': { const v=await rosterDialog(null); if(!v) return; bank.settings.rosters=[...(bank.settings.rosters||[]),{id:uid(),...v}]; persist(); render(); toast(`已添加 ${v.name}（${v.names.length} 人）`); break; }
@@ -3783,7 +4141,7 @@ function toolbarHTML(){
   <span class="tb-sep"></span>
   <button data-cmd="blank" class="blankbtn" title="把选中的文字设为填空答案（挖空）">挖空</button><button data-cmd="miss" class="missbtn" title="把光标所在的空标记为“我曾答错”，再点一次取消">答错</button>
   <span class="tb-sep"></span>
-  <button data-cmd="sym" title="插入常用符号">符号 ▾</button><button data-cmd="table" title="插入表格">表格</button><button data-cmd="img" title="插入图片">图片</button><button data-cmd="link" title="插入链接">链接</button>
+  <button data-cmd="sym" title="插入常用符号">符号 ▾</button><button data-cmd="tex" title="插入化学式、反应式（箭头上下可写条件）等公式模板">公式</button><button data-cmd="table" title="插入表格">表格</button><button data-cmd="img" title="插入图片">图片</button><button data-cmd="link" title="插入链接">链接</button>
   <span class="tb-sep"></span><button data-cmd="clear" title="清除选中文字的格式（也会取消挖空）">清除格式</button>
   <span class="tb-tip">截图后按 ⌘V 粘贴 · ⌘S 保存</span>
   <div class="sym-pop" id="symPop" hidden>${SYMS.map(([l,h,w],i)=>`<button data-sym="${i}" class="${w?'wide':''}" title="${esc(l)}">${h}</button>`).join('')}</div>`;
@@ -3797,22 +4155,22 @@ function secPickHTML(p){
 }
 function renderEditor(){
   const d=draft, X=edExam?bank.exams.find(e=>e.id===edExam.examId):null;
-  const title=X?(editorIsNew?'录入整卷题目':'编辑整卷题目'):edCollect?'收进题库':editorIsNew?'录入题目':'编辑题目';
+  const title=X?(editorIsNew?'录入卷中题目':'编辑卷中题目'):edCollect?'收进题库':editorIsNew?'录入题目':'编辑题目';
   ED.innerHTML=`<div class="ed-wrap">
    <div class="ed-head"><h3>${title}</h3><span class="sp"></span>
      <button class="btn ghost" data-eact="cancel">取消</button>${editorIsNew&&!edCollect?'<button class="btn" data-eact="savenew">保存并录入下一题</button>':''}<button class="btn primary" data-eact="save">${edCollect?'保存到题库':'保存'}</button></div>
    <div class="ed-toolbar" id="rtb">${toolbarHTML()}</div>
    <div class="ed-body">
-    ${X?`<div class="ex-tip">这道题只保存在整卷「${esc(X.name)}」里，不会进入题库；以后可以在整卷里点“收进题库”。</div>`:''}
-    ${edCollect?'<div class="ex-tip">从整卷复制一份到题库：选好主节和考点 tag 后保存。整卷里的原题不变。</div>':''}
+    ${X?`<div class="ex-tip">这道题只保存在试卷「${esc(X.name)}」里，不会进入题库；以后可以在试卷库里点“收进题库”。</div>`:''}
+    ${edCollect?'<div class="ex-tip">从试卷库复制一份到题库：选好主节和考点 tag 后保存。卷中的原题不变。</div>':''}
     ${d.review?`<div class="review"><span>导入备注：${esc(d.review)}</span><button data-eact="reviewok">知道了，清除</button></div>`:''}
     <div class="ed-grid">
      ${X?'':`<label>主节</label><div class="ed-line" id="secPick">${secPickHTML(d.primary)}</div>`}
-     <label>题型</label><div class="seg" id="typeSeg">${TYPE_ORDER.map(t=>`<button data-eact="type" data-v="${t}" class="${d.type===t?'on':''}">${TYPES[t]}</button>`).join('')}</div>
+     <label>题型</label><div class="ed-line"><div class="seg" id="typeSeg">${TYPE_ORDER.map(t=>`<button data-eact="type" data-v="${t}" class="${d.type===t?'on':''}">${TYPES[t]}</button>`).join('')}</div></div>
      <label>年级</label><div class="ed-line"><div class="seg" id="gradeSeg">${GRADES.map(g=>`<button data-eact="grade" data-v="${g}" class="${d.grade===g?'on':''}">${g}</button>`).join('')}</div></div>
      <label>难度</label><div class="lvrow"><div class="seg" id="lvSeg">${[1,2,3,4,5].map(n=>`<button data-eact="level" data-v="${n}" class="${!d.levelUnset&&d.level===n?'on':''}">${LEVELS[n]}</button>`).join('')}</div>${d.levelUnset?'<span class="hint">未评定（选一个等级即可）</span>':''}</div>
-     ${X?'':`<label>关联题目</label><div class="ed-line"><input id="edRelated" value="${esc(relatedQs(d).map(qCode).join(' '))}" placeholder="填题目编号，如 #21105 #22103" autocomplete="off"><span class="hint">做对需要掌握同一类知识点的题，才算关联（只是考点相同不算）</span></div>`}
-     ${X?'':`<label>来源</label><div class="ed-line"><input id="edSource" value="${esc(d.source)}" placeholder="试卷，如：2026海安高三期初" data-srcac autocomplete="off"><input id="edQno" value="${esc(d.qno)}" placeholder="题号 T12"><label class="chk"><input type="checkbox" id="edAdapted" ${d.adapted?'checked':''}>改编</label></div>`}
+     ${X?'':`<label>关联题目</label><div class="ed-line"><input id="edRelated" value="${esc(relatedQs(d).map(qCode).join(' '))}" placeholder="如 #21105" autocomplete="off"></div>`}
+     ${X?'':`<label>来源</label><div class="ed-line"><input id="edSource" value="${esc(d.source)}" placeholder="试卷，如：2026南京高三零模" data-srcac autocomplete="off"><input id="edQno" value="${esc(d.qno)}" placeholder="题号 T12"><label class="chk"><input type="checkbox" id="edAdapted" ${d.adapted?'checked':''}>改编</label></div>`}
     </div>
     <div id="edDyn"></div>
     <div class="ed-sec"><div class="ed-lbl">解析</div><div class="rich" contenteditable="true" data-f="analysis" data-ph="解析"></div></div>
@@ -4106,11 +4464,13 @@ function runCmd(cmd){
     case 'table': {
       const v=prompt('插入表格：行数 × 列数（例如 3x4）','3x3'); if(!v) return; const m=v.match(/(\d+)\s*[x×*,， ]\s*(\d+)/i); if(!m){ alert('格式示例：3x4'); return; }
       const r=Math.min(30,+m[1]),c=Math.min(12,+m[2]); insertHTMLAt(ed,`<table><tbody>${Array.from({length:r},()=>`<tr>${'<td>&nbsp;</td>'.repeat(c)}</tr>`).join('')}</tbody></table><br>`); break; }
+    case 'tex': texDialog(); break;
     case 'img': { const i=document.createElement('input'); i.type='file'; i.accept='image/*'; i.multiple=true; i.onchange=()=>insertImages(ed,[...i.files]); i.click(); break; }
   }
 }
 ED.addEventListener('click',async e=>{
   if(e.target.closest('.rich a')){ e.preventDefault(); return; }
+  const tx=e.target.closest('.rich .tex'); if(tx){ e.preventDefault(); lastRich=tx.closest('.rich'); texDialog(tx); return; }
   const sym=e.target.closest('[data-sym]'); if(sym){ const ed=lastRich&&lastRich.isConnected?lastRich:null; if(!ed){ toast('请先点一下要编辑的输入框'); return; } const [,h,w]=SYMS[+sym.dataset.sym]; insertHTMLAt(ed,w?h+'​':h); return; }
   const cb=e.target.closest('[data-cmd]'); if(cb){ if(cb.dataset.cmd!=='sym') $('#symPop').hidden=true; runCmd(cb.dataset.cmd); return; }
   if(!e.target.closest('#symPop')) { const p=$('#symPop'); if(p) p.hidden=true; }
@@ -4186,7 +4546,7 @@ function demoBank(){
   return {version:APP_VERSION,topics:[{id:'Z-0-demo',name:'实验专题'}],tags:[{id:'t1',sec:'2-1-1',name:'性状分离比'},{id:'t2',sec:'2-1-1',name:'假说—演绎法'},{id:'t3',sec:'2-1-1',name:'测交'},{id:'t4',sec:'2-2-1',name:'减数分裂与分离定律'}],
    questions:[
     {id:'q1',type:'single',stem:'孟德尔利用假说—演绎法发现了分离定律。下列属于孟德尔“<span class="em-dot">演绎推理</span>”内容的是',options:['F<sub>1</sub>自交，后代出现3∶1的性状分离比','生物的性状是由遗传因子决定的','若F<sub>1</sub>产生配子时成对的遗传因子分离，则测交后代会出现两种性状，比例接近1∶1','受精时，雌雄配子的结合是随机的'],key:'C',wrong:'A',analysis:'演绎推理是根据假说推导出测交实验的预期结果；A 是实验现象，B、D 属于假说内容。',note:'学生常把“提出假说”和“演绎推理”混淆。',level:3,source:'示例题',grade:'高一',primary:'2-1-1',tags:['t2'],created:n-5000},
-    {id:'q2',type:'judge',judges:[{text:'杂合子自交，后代一定会出现性状分离',key:'✓'},{text:'测交后代的表型及比例能反映F<sub>1</sub>产生配子的数量',key:'×',miss:true}],analysis:'测交只能反映配子的种类和比例。',level:1,source:'2026海安高三期初',qno:'T2',primary:'2-1-1',tags:['t1','t3'],tagsPending:true,created:n-4000},
+    {id:'q2',type:'judge',judges:[{text:'杂合子自交，后代一定会出现性状分离',key:'✓'},{text:'测交后代的表型及比例能反映F<sub>1</sub>产生配子的数量',key:'×',miss:true}],analysis:'测交只能反映配子的种类和比例。',level:1,source:'2026南京高三零模',qno:'T2',primary:'2-1-1',tags:['t1','t3'],tagsPending:true,created:n-4000},
     {id:'q3',type:'fill',stem:'豌豆作为遗传学研究材料的优点有<u class="blank">自花传粉、闭花受粉，自然状态下一般是纯种</u>；具有<u class="blank miss">易于区分的相对性状</u>。',level:2,primary:'2-1-1',tags:[],levelUnset:true,created:n-3000},
     {id:'q4',type:'answer',stem:'某植物的花色由一对等位基因A、a控制，紫花对白花为显性。两株紫花植株杂交，F<sub>1</sub>中紫花∶白花=3∶1。',subs:[{stem:'亲本的基因型为<u class="blank">Aa、Aa</u>。',score:1},{stem:'F<sub>1</sub>紫花植株自交，后代中白花植株所占比例为<u class="blank">1/6</u>。',analysis:'F<sub>1</sub>紫花中AA占1/3、Aa占2/3，2/3×1/4=1/6。',score:1}],level:4,source:'2024 某地模拟',primary:'2-1-1',tags:['t1','t3'],created:n-2000},
     {id:'q5',type:'multi',stem:'下列关于减数分裂与分离定律的叙述，正确的是',options:['等位基因的分离发生在减数分裂Ⅰ后期','分离定律的细胞学基础是同源染色体分离','姐妹染色单体分离导致等位基因分离','分离定律适用于原核生物'],key:'AB',wrong:'B',analysis:'C 错误：姐妹染色单体上通常是相同基因；D 错误：分离定律适用于进行有性生殖的真核生物。',extra:'分离定律的实质：在杂合子的细胞中，位于一对同源染色体上的等位基因具有一定的独立性。',level:4,source:'示例题',primary:'2-2-1',tags:['t4','t1'],created:n-1000}
