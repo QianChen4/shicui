@@ -89,7 +89,7 @@ body.side-dragging{cursor:col-resize;user-select:none}
 .cnt:empty{display:none}
 
 /* ---------- 按钮 ---------- */
-.btn{border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:6px 13px;cursor:pointer;white-space:nowrap;transition:background .12s,border-color .12s}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:6px 13px;cursor:pointer;white-space:nowrap;transition:background-color .15s ease,border-color .15s ease,color .15s ease,transform .1s ease}
 .btn:hover{border-color:var(--line3);background:var(--panel-h)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn.primary:hover{background:var(--accent-d);border-color:var(--accent-d)}
@@ -419,6 +419,17 @@ details.panel[open]>summary:before{transform:rotate(90deg)}
 .badge.used{background:var(--b-used);color:var(--b-used-t)}
 .dup-item{border:1px solid var(--line2);border-radius:10px;padding:8px 10px;margin-bottom:6px;font-size:13px;line-height:1.7}
 .dup-item .hint{display:block}
+.modal-card.ip-card{width:880px;max-height:94vh;display:flex;flex-direction:column}
+.ip-card .ip-list{overflow:auto;flex:1;min-height:120px;margin:8px -6px 12px;padding:2px 6px}
+.ip-card .ip-item{margin-bottom:10px;transition:opacity .15s}
+.ip-card .ip-item.off{opacity:.42}
+.ip-card .ip-item.off .rendered,.ip-card .ip-item.off .qtags{filter:grayscale(1)}
+.ip-card .ip-chk{display:inline-flex;align-items:center;gap:5px;font-weight:600;margin-right:4px;cursor:pointer}
+.ip-card .ip-chk input{width:16px;height:16px}
+.ip-card .qans{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line2)}
+.ip-card .ip-tools{margin:0}
+.ip-card .ip-foot{margin:0;align-items:center}
+.ip-err{background:var(--warn-w);border:1px solid var(--warn-b);border-radius:10px;padding:8px 12px;font-size:13px;margin:0 0 10px;color:var(--warn)}
 .form-row{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:13.5px}
 .form-row>span:first-child{width:64px;color:var(--muted);flex:none}
 .form-row input:not([type=checkbox]){flex:1}
@@ -704,6 +715,34 @@ pre{background:var(--soft);border:1px solid var(--line2);border-radius:10px;padd
 .tex-help table{border-collapse:collapse;margin-top:6px;width:100%}
 .tex-help td{padding:3px 6px;border-bottom:1px solid var(--line2)}
 .tex-help code{font-family:Menlo,Monaco,monospace;background:var(--soft);border-radius:4px;padding:0 4px}
+/* ---------- 鼠标悬停：柔和、统一（v2.14.1） ----------
+   原则：背景或边框略微变深/变亮，平滑过渡 .15s，不放大、不跳动；按下时轻轻收一下。
+   :where() 不加权重，组件自己写了 transition 的照旧。 */
+:where(button,.btn,.icon,.chip,.pick,.bsel,.chk,.ip-chk,.t-book,.t-chap,.t-sec,.t-add,.ws-act,.ws-item,.stat,.ac-item,.sel-item,.set-chip,.badge,.note-head,.note-head h3,.b-main,.bitem,summary,a,.brand,.g-list li,.g-chips span,.tex-tpl,.dup-item){transition:background-color .15s ease,border-color .15s ease,color .15s ease,box-shadow .15s ease,opacity .15s ease,transform .1s ease}
+.btn:active:not(:disabled),.icon:active:not(:disabled),.ws-act:active,.seg button:active,.chip:not(.static):not(.edit):active,.pick:active{transform:scale(.97)}
+.brand:hover{opacity:.78}
+.grade-switch button:not(.on):hover{background:color-mix(in srgb,var(--panel) 55%,transparent);color:var(--text)}
+.tabs button:not(.on):hover{color:var(--text);border-bottom-color:var(--line3)}
+.btn.on:hover{background:color-mix(in srgb,var(--accent) 16%,var(--panel));border-color:var(--accent-b)}
+.btn.danger:hover{border-color:color-mix(in srgb,var(--danger) 35%,transparent)}
+.btn:disabled:hover{border-color:var(--line);background:var(--panel)}
+.btn.ghost:disabled:hover{background:transparent;border-color:transparent}
+.btn.primary:disabled:hover{background:var(--accent);border-color:var(--accent)}
+.chip:not(.on):not(.static):not(.edit):hover{background:var(--line2)}
+.chip.on:hover{border-color:var(--accent)}
+.pick:not(.on):hover{border-color:var(--line3);background:var(--line2)}
+.pick.on:hover{border-color:var(--accent)}
+.bsel:hover,.chk:hover,.ip-card .ip-chk:hover{color:var(--text)}
+:is(.pick,.bsel,.chk,.ip-chk,label):hover>input[type=checkbox]:not(:checked):not(:disabled){border-color:var(--accent)}
+.pend-flag button:hover{background:var(--warn-b)}
+.review button:hover{opacity:.75}
+.note-head:hover h3{color:var(--accent-d)}
+.note-head:hover .caret{color:var(--accent)}
+.bitem:has(.b-main:hover){border-color:var(--line3)}
+.badge.inbank:hover{box-shadow:inset 0 0 0 1px color-mix(in srgb,currentColor 35%,transparent)}
+summary:hover,.tex-help summary:hover{color:var(--accent)}
+a:hover,.tips2 a:hover,.g-qs a:hover{text-decoration:underline;text-underline-offset:2px;opacity:.75}
+.stat.link:hover{background:var(--panel-h)}
 </style>
 </head>
 <body>
@@ -745,8 +784,8 @@ pre{background:var(--soft);border:1px solid var(--line2);border-radius:10px;padd
 const APP_VERSION=6; // 数据格式版本（v5：题目编号 no、讲题记录 taught、题集 sets、tag 别名 alias；v6：关联题目 related，去掉难度系数 coef）
 /* 版本号：v1.x 是加入在线更新以前的版本，v2.x 起有在线更新（原 v3.1.0–v3.6.0 即 v2.1.0–v2.6.0）。
    v2.6.0 以前的更新程序只认下面注释里的旧编号（第一位数字加 1），由 tools/release.py 自动填写，不要手改。
-   兼容旧版更新：const PROGRAM_VERSION='3.13.2' */
-const PROGRAM_VERSION='2.13.2'; // 程序版本：重大更新改第一位，小功能改后两位；写好 更新记录.md，再运行 tools/release.py 更新 latest.json
+   兼容旧版更新：const PROGRAM_VERSION='3.14.1' */
+const PROGRAM_VERSION='2.14.1'; // 程序版本：重大更新改第一位，小功能改后两位；写好 更新记录.md，再运行 tools/release.py 更新 latest.json
 const TRASH_DAYS=30;
 /* ================= 教材目录（人教版 2019） ================= */
 const CATALOG_RAW = [
@@ -1350,7 +1389,7 @@ function normQ(q){
 function normalizeBank(d){
   const settings=clone(DEFAULT_SETTINGS);
   if(d.settings){ Object.assign(settings.score,d.settings.score||{}); if(d.settings.grade) settings.grade=d.settings.grade; if(d.settings.print&&typeof d.settings.print==='object') settings.print=d.settings.print; if(d.settings.autoUpdate===false) settings.autoUpdate=false;
-    for(const k of ['mode','imgMax','achv','achvEv','achvOff','daily','dailyLog','basketTarget','lastClass']) if(d.settings[k]!==undefined) settings[k]=d.settings[k];
+    for(const k of ['mode','imgMax','achv','achvEv','achvOff','daily','dailyLog','basketTarget','lastClass','lastImport']) if(d.settings[k]!==undefined) settings[k]=d.settings[k];
     if(Array.isArray(d.settings.rosters)) settings.rosters=d.settings.rosters.filter(r=>r&&r.id&&Array.isArray(r.names)).map(r=>({id:r.id,name:String(r.name||'未命名班级'),names:r.names.map(String).filter(Boolean)})); }
   bank={version:APP_VERSION,settings,topics:[],tags:[],questions:[],notes:[],basket:[],papers:[],basketPaper:'',exams:[],trash:[],sets:[],nextNo:0,secNext:{}};
   bank.nextNo=Number.isInteger(d.nextNo)?d.nextNo:0;
@@ -3068,7 +3107,7 @@ function renderSettings(){
   <div class="panel"><div class="panel-title">默认分值 <span class="hint">题目加入试题篮时使用，之后可以逐题修改</span></div>
     <div class="set-grid">${scores.map(([k,l])=>`<label>${l}<span><input type="number" min="0" step="0.5" data-set="score.${k}" value="${s.score[k]}"> 分</span></label>`).join('')}</div></div>
   <div class="panel"><div class="panel-title">导入</div>
-    <div class="btn-row"><button class="btn primary" data-act="import">导入文件（.json）</button><span class="hint">可以导入题目文件、题目更新文件或备份文件。导入前会自动备份当前题库。</span></div></div>
+    <div class="btn-row"><button class="btn primary" data-act="import">导入文件（.json）</button><span class="hint">可以导入题目文件、题目更新文件或备份文件。导入题目前会先预览录入后的样子，可以逐条去掉；导入前会自动备份当前题库。</span></div>${(()=>{ const I=lastImportInfo(); if(!I) return ''; const d=new Date(I.L.at); return `<div class="btn-row" style="margin-top:8px"><button class="btn" data-act="undoimport">撤销最近一次导入</button><span class="hint">${d.getMonth()+1}月${d.getDate()}日 ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}${I.L.file?' 导入的「'+esc(I.L.file)+'」':''}：还有 ${I.qs.length} 道题${I.ns.length?`、${I.ns.length} 篇笔记`:''}在题库里，撤销后移到回收站。</span></div>`; })()}</div>
   <div class="panel"><div class="panel-title">导出</div>
     <div class="btn-row"><button class="btn" data-act="export">导出完整备份（含图片）</button><button class="btn" data-act="exporttext">导出纯文字版</button></div>
     <p class="hint" style="margin:8px 0 0">完整备份包含全部题目、笔记和图片，可以存到 U 盘或网盘。纯文字版只包含文字内容，不含图片，体积较小。</p></div>
@@ -3109,7 +3148,7 @@ async function restoreOrImport(){
   if(data.format==='qbank-exam'){ await flush(); try{ await store.writeBackup(`before-import-${Date.now()}.json`,JSON.stringify(bank)); }catch(e){} await importExam(data,null,file.name); return; }
   if(data.format==='qbank-import'||data.format==='qbank-update'){
     await flush(); try{ await store.writeBackup(`before-import-${Date.now()}.json`,JSON.stringify(bank)); }catch(e){}
-    if(data.format==='qbank-import') await importQuestions(data); else applyUpdates(data);
+    if(data.format==='qbank-import') await importQuestions(data,file.name); else applyUpdates(data);
     return;
   }
   let nb,images={};
@@ -3162,14 +3201,15 @@ function normKey(type,k){
   return '';
 }
 function judgeKey(k){ k=String(k??'').trim(); return /^(√|✓|✔|对|正确|T|true|是)$/i.test(k)?'✓':k?'×':''; }
-async function importQuestions(data){
+async function importQuestions(data,fname){
+  const snap=JSON.stringify(bank), tags0=new Set(bank.tags.map(t=>t.id)); // 预览时取消就回到这里
   (data.topics||[]).forEach(n=>addTopic(String(n)));
-  (data.extraTags||[]).forEach(t=>{ const sec=resolveSection(t.section,true); if(sec&&t.name) addTag(sec,t.name); });
-  const list=Array.isArray(data.questions)?data.questions:[]; let ok=0; const errs=[]; const base=Date.now(); const fresh=[], dups=[]; let skipped=0;
+  const keepTag=new Set(); (data.extraTags||[]).forEach(t=>{ const sec=resolveSection(t.section,true); if(sec&&t.name){ const tg=addTag(sec,t.name); if(tg) keepTag.add(tg.id); } });
+  const list=Array.isArray(data.questions)?data.questions:[]; const errs=[]; const base=Date.now(); const fresh=[], items=[], notes=[];
   const refMap=new Map(), relReq=[], dupOf=new Map(); // ref：文件里给题起的代号，related 可以写代号或已有题的编号 #12
-  const show=$('#saveStatus');
+  const show=$('#saveStatus'), st0=show.textContent;
   for(const [i,r] of list.entries()){
-    if(i%10===0) show.textContent=`导入中 ${i}/${list.length}…`;
+    if(i%10===0) show.textContent=`读取中 ${i}/${list.length}…`;
     try{
       const sec=resolveSection(r.section,true); if(!sec) throw new Error('找不到所属节：'+r.section);
       const type=resolveType(r.type); if(!type) throw new Error('无法识别题型：'+r.type);
@@ -3180,30 +3220,96 @@ async function importQuestions(data){
       }
       if(r.ref!=null&&r.ref!=='') refMap.set(String(r.ref),q);
       if(Array.isArray(r.related)&&r.related.length) relReq.push([q,r.related]);
-      const sim=findSimilar(q,fresh); if(sim.length) dups.push({q,m:sim[0].q});
+      const sim=findSimilar(q,fresh); items.push({q,dup:sim.length?sim[0].q:null});
       fresh.push({q,bg:bigrams(dupText(q))});
     }catch(e){ errs.push(`第 ${i+1} 题：${e.message}`); }
   }
-  if(dups.length){
-    const skip=await choose('发现可能重复的题',`有 ${dups.length} 道题和题库里已有的题（或本次导入的其他题）文字高度相似。\n\n跳过：不导入这 ${dups.length} 道题。\n仍然导入：照常导入，并给这些题加上“导入备注”，之后可以用“有导入备注”筛选出来逐一检查。`,[{label:'仍然导入',value:false},{label:'跳过这些题',value:true,primary:true}]);
-    const ds=new Set(dups.map(x=>x.q));
-    if(skip){ for(let i=fresh.length-1;i>=0;i--) if(ds.has(fresh[i].q)) fresh.splice(i,1); dups.forEach(({q,m})=>dupOf.set(q,m)); }
-    else dups.forEach(({q,m})=>{ const msg=`可能与已有题重复：${qSnippet(m,40)}（${SECTIONS[m.primary].short}${m.source?' · '+sourceText(m):''}）`; q.review=q.review?q.review+'；'+msg:msg; });
-    if(skip) skipped=dups.length;
-  }
-  fresh.forEach(x=>{ bank.questions.push(x.q); ok++; });
-  let nn=0;
   for(const [i,n] of (data.notes||[]).entries()){
     try{ const sec=resolveSection(n.section,true); if(!sec) throw new Error('找不到所属节：'+n.section);
-      bank.notes.push({id:uid(),sec,title:String(n.title||''),body:cleanField(await extractDataImages(toHTML(n.body))),created:base+i,updated:base+i}); nn++; }
+      notes.push({id:uid(),sec,title:String(n.title||''),body:cleanField(await extractDataImages(toHTML(n.body))),created:base+i,updated:base+i}); }
     catch(e){ errs.push(`第 ${i+1} 篇笔记：${e.message}`); }
   }
+  show.textContent=st0;
+  const pick0=await importPreview(items,notes,errs,fname);
+  if(!pick0){ // 取消：题库回到导入前，读文件时存下的图片也删掉
+    const imgs=new Set([...items.flatMap(x=>collectImgNames(allHtml(x.q))),...notes.flatMap(n=>collectImgNames(n.body))]);
+    normalizeBank(JSON.parse(snap)); reindexAll(); render();
+    const used=usedImageNames(); for(const n of imgs) if(!used.has(n)){ try{ await store.deleteImage(n); }catch(e){} }
+    toast('已取消，题库没有改动'); return;
+  }
+  const {qs:keepQ,ns:keepN}=pick0; let skipped=0;
+  items.forEach(({q,dup})=>{
+    if(!keepQ.has(q)){ skipped++; if(dup) dupOf.set(q,dup); return; }
+    if(dup&&!keepQ.has(dup)&&!bank.questions.includes(dup)) return;
+    if(dup){ const msg=`可能与已有题重复：${qSnippet(dup,40)}（${SECTIONS[dup.primary].short}${dup.source?' · '+sourceText(dup):''}）`; q.review=q.review?q.review+'；'+msg:msg; }
+  });
+  const addQs=items.filter(x=>keepQ.has(x.q)).map(x=>x.q), addNs=notes.filter(n=>keepN.has(n));
+  addQs.forEach(q=>bank.questions.push(q)); addNs.forEach(n=>bank.notes.push(n));
+  const skippedN=notes.length-addNs.length;
+  // 只给没导入的题新建的 tag 不留
+  addQs.forEach(q=>q.tags.forEach(id=>keepTag.add(id)));
+  bank.tags=bank.tags.filter(t=>tags0.has(t.id)||keepTag.has(t.id)||bank.questions.some(q=>q.tags.includes(t.id)));
   reindexAll();
   const live=new Set(bank.questions), pick=x=>{ while(x&&!live.has(x)&&dupOf.has(x)) x=dupOf.get(x); return live.has(x)?x:null; };
+  const dropped=new Set(items.map(x=>x.q).filter(q=>!keepQ.has(q)));
   for(const [q0,refs] of relReq){ const q=pick(q0); if(!q) continue;
-    for(const x of refs){ const o=pick(refMap.get(String(x)))||resolveQRef(x); if(o&&o!==q&&live.has(o)) linkQs(q,o); else errs.push(`关联题目找不到：${x}`); } }
+    for(const x of refs){ const r=refMap.get(String(x)); const o=pick(r)||resolveQRef(x); if(o&&o!==q&&live.has(o)) linkQs(q,o); else if(!(r&&dropped.has(r))) errs.push(`关联题目找不到：${x}`); } }
+  const newTags=bank.tags.filter(t=>!tags0.has(t.id)).map(t=>t.id);
+  bank.settings.lastImport=(addQs.length||addNs.length)?{at:Date.now(),file:fname||'',qids:addQs.map(q=>q.id),nids:addNs.map(n=>n.id),tags:newTags}:null;
   persist(); render();
-  alert(`导入完成：${ok} 道题、${nn} 篇笔记${skipped?`；跳过 ${skipped} 道可能重复的题`:''}${errs.length?`；失败 ${errs.length} 项：\n`+errs.slice(0,12).join('\n'):''}`);
+  const msg=`导入完成：${addQs.length} 道题、${addNs.length} 篇笔记${skipped||skippedN?`；没有导入 ${[skipped?skipped+' 道题':'',skippedN?skippedN+' 篇笔记':''].filter(Boolean).join('、')}`:''}${errs.length?`；失败 ${errs.length} 项：\n`+errs.slice(0,12).join('\n'):''}\n\n如果不满意，可以点“撤销这次导入”，之后也可以在“设置 → 导入”里撤销。`;
+  if(bank.settings.lastImport&&await choose('导入完成',msg,[{label:'撤销这次导入',value:true},{label:'好',value:false,primary:true}])) await undoImport();
+  else if(!bank.settings.lastImport) alert(msg.split('\n\n')[0]);
+}
+/* 导入前预览：逐条看录入后的样子，取消勾选的不导入。返回 {qs,ns}（选中的题和笔记）或 null（取消） */
+function importPreview(items,notes,errs,fname){ return new Promise(res=>{
+  const m=$('#modal'); const on=new Set([...items.filter(x=>!x.dup).map(x=>x.q),...notes]); let only='';
+  const all=[...items.map(x=>x.q),...notes];
+  const nd=items.filter(x=>x.dup).length;
+  const qItem=({q,dup},i)=>`<div class="ip-item qcard reveal ${on.has(q)?'':'off'}" data-ip="q${i}" data-kind="q${dup?' dup':''}">
+     <div class="qmeta"><label class="ip-chk"><input type="checkbox" ${on.has(q)?'checked':''}> 第 ${i+1} 题</label>${metaBadges(q,false)}</div>
+     ${dup?`<div class="review"><span>可能与${bank.questions.includes(dup)?'题库里已有的题':'本次导入的另一道题'}重复：${esc(qSnippet(dup,40))}（${esc(SECTIONS[dup.primary].short)}${dup.source?' · '+esc(sourceText(dup)):''}）。默认不导入，确认不重复的话勾选上。</span></div>`:''}
+     ${q.review?`<div class="review"><span>导入备注：${esc(q.review)}</span></div>`:''}
+     <div class="rendered">${qBodyHTML(q)}</div>${tagsHTML(q).replace(/<button data-act="tagconfirm">.*?<\/button>/,'').replace(/<button class="chip/g,'<span class="chip static').replace(/<\/button>/g,'</span>')}
+     <div class="qans rendered">${qAnsHTML(q)}</div></div>`;
+  const nItem=(n,i)=>`<div class="ip-item qcard ${on.has(n)?'':'off'}" data-ip="n${i}" data-kind="n">
+     <div class="qmeta"><label class="ip-chk"><input type="checkbox" ${on.has(n)?'checked':''}> 笔记</label><b>${esc(n.title||'（无标题）')}</b><span class="meta-sec">${esc(SECTIONS[n.sec].path)}</span></div>
+     <div class="rendered">${n.body}</div></div>`;
+  const cnt=()=>{ const a=items.filter(x=>on.has(x.q)).length, b=notes.filter(n=>on.has(n)).length; return [a,b]; };
+  const foot=()=>{ const [a,b]=cnt(); $('#ipN',m).textContent=`已选 ${a} 道题${notes.length?`、${b} 篇笔记`:''}`; const ok=$('[data-ok]',m); ok.disabled=!a&&!b; ok.textContent=a||b?`导入选中的 ${a+b} 项`:'导入'; };
+  m.innerHTML=`<div class="modal-card ip-card"><h3>导入预览${fname?` <span class="hint">${esc(fname)}</span>`:''}</h3>
+    <p>文件里有 ${items.length} 道题${notes.length?`、${notes.length} 篇笔记`:''}，下面是录入后的样子（答案解析已展开）。不想要的取消勾选，确认后才会写进题库；点“取消”题库不会有任何改动。${nd?`<br>有 ${nd} 道题和已有的题文字高度相似，默认没勾选。`:''}</p>
+    ${errs.length?`<div class="ip-err">有 ${errs.length} 项读取失败，不会导入：<br>${errs.slice(0,8).map(esc).join('<br>')}${errs.length>8?'<br>…':''}</div>`:''}
+    <div class="btn-row ip-tools"><button class="btn small" data-all="1">全选</button><button class="btn small" data-all="0">全不选</button>
+      ${nd?`<button class="btn small" data-only="dup">只看可能重复的（${nd}）</button>`:''}${notes.length&&items.length?`<button class="btn small" data-only="q">只看题目</button><button class="btn small" data-only="n">只看笔记</button>`:''}
+      <button class="btn small" data-only="" hidden>看全部</button></div>
+    <div class="ip-list">${items.map(qItem).join('')}${notes.map(nItem).join('')}${!items.length&&!notes.length?'<div class="empty">文件里没有可以导入的题目或笔记。</div>':''}</div>
+    <div class="btn-row ip-foot"><span id="ipN" class="hint"></span><span class="sp"></span><button class="btn" data-x>取消</button><button class="btn primary" data-ok>导入</button></div></div>`;
+  m.hidden=false; hydrateImages(m); foot();
+  const setOn=(el,v)=>{ const k=el.dataset.ip, x=k[0]==='q'?items[+k.slice(1)].q:notes[+k.slice(1)]; v?on.add(x):on.delete(x); el.classList.toggle('off',!v); $('input',el).checked=v; };
+  const vis=()=>$$('.ip-item',m).filter(el=>!el.hidden);
+  m.onchange=e=>{ const el=e.target.closest('.ip-item'); if(el&&e.target.matches('.ip-chk input')){ setOn(el,e.target.checked); foot(); } };
+  m.onclick=e=>{
+    const a=e.target.closest('[data-all]'); if(a){ vis().forEach(el=>setOn(el,a.dataset.all==='1')); foot(); return; }
+    const o=e.target.closest('[data-only]'); if(o){ only=o.dataset.only; $$('.ip-item',m).forEach(el=>{ const k=el.dataset.kind; el.hidden=!!only&&!(only==='dup'?k.includes('dup'):k[0]===only); }); $$('[data-only]',m).forEach(b=>b.hidden=b.dataset.only===only&&!!only||(b.dataset.only===''&&!only)); return; }
+    if(e.target.closest('[data-x]')){ m.hidden=true; res(null); return; }
+    if(e.target.closest('[data-ok]')){ m.hidden=true; res({qs:new Set(items.map(x=>x.q).filter(q=>on.has(q))),ns:new Set(notes.filter(n=>on.has(n)))}); }
+  };
+}); }
+/* 撤销最近一次批量导入：那次导入、现在还在题库里的题和笔记移到回收站（可以恢复），只给它们新建的 tag 一并去掉 */
+function lastImportInfo(){ const L=bank.settings.lastImport; if(!L) return null;
+  const qs=L.qids.map(qById).filter(Boolean), ns=L.nids.map(id=>bank.notes.find(n=>n.id===id)).filter(Boolean);
+  return qs.length||ns.length?{L,qs,ns,edited:qs.filter(q=>q.updated>L.at+1000).length+ns.filter(n=>n.updated>L.at+1000).length}:null; }
+async function undoImport(){
+  const I=lastImportInfo(); if(!I){ bank.settings.lastImport=null; persist(); toast('最近导入的题都已经不在题库里了'); render(); return; }
+  const {L,qs,ns,edited}=I; const when=new Date(L.at);
+  const ok=await choose('撤销这次导入',`${when.getMonth()+1}月${when.getDate()}日 ${String(when.getHours()).padStart(2,'0')}:${String(when.getMinutes()).padStart(2,'0')} ${L.file?'导入的「'+L.file+'」':'的导入'}：\n现在还在题库里的 ${qs.length} 道题${ns.length?`、${ns.length} 篇笔记`:''}会移到回收站（${TRASH_DAYS} 天内可以恢复）。${edited?`\n\n其中 ${edited} 项导入后改过，改动也会一起移到回收站。`:''}`,[{label:'取消',value:false},{label:'撤销导入',value:true,danger:true}]);
+  if(!ok) return;
+  await flush(); try{ await store.writeBackup(`before-undo-import-${Date.now()}.json`,JSON.stringify(bank)); }catch(e){}
+  qs.forEach(trashQuestion); ns.forEach(trashNote);
+  const nt=new Set(L.tags||[]); bank.tags=bank.tags.filter(t=>!nt.has(t.id)||bank.questions.some(q=>q.tags.includes(t.id)));
+  bank.settings.lastImport=null; reindexAll(); persist(); render();
+  toast(`已撤销：${qs.length} 道题${ns.length?`、${ns.length} 篇笔记`:''}移到了回收站`);
 }
 /* 导入文件里的一道题 → 题目对象（不含 tag） */
 async function rawToQ(r,type,sec,t){
@@ -4037,6 +4143,7 @@ main.addEventListener('click',async e=>{
     case 'export': exportFull(); break;
     case 'exporttext': exportText(); break;
     case 'import': restoreOrImport(); break;
+    case 'undoimport': undoImport(); break;
     case 'cleanimg': cleanImages(); break;
     case 'updcheck': checkUpdate(); break;
     case 'updfile': updateFromFile(); break;
